@@ -199,6 +199,10 @@
                                 <div class="casino-btn col-sm-12">
                                     <button type="submit" class=" btn-4 yellow-btn faq-btn">Login</button>
                                 </div>
+                                
+                            </div>
+                            <div class="newUsser">
+                            	<span>Are you new user <a href="signup.jsp">Signup</a> </span>
                             </div>
                         </form>
                     </div>

@@ -768,9 +768,20 @@ nav.navbar .container {
     border-radius: initial;
     border: initial;
     padding: initial;
+    text-align:center;
+}
+.newUsser{
+	color:#fff;
+	margin-top:10px;
+	text-align: center;
+
+}
+.newUsser a{
+	color:#ffcd04;
 }
 .full_nav .userNav-res .nav li:last-child a{
     opacity:1 !important;
+    color:#fff;
 }
 .full_nav .userNav-res .nav li:last-child .dropdown-menu{
     width:auto;

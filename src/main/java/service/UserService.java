@@ -18,6 +18,9 @@ public class UserService {
         ResultSet resultSet = null;
         User user = null;
 
+        GameService gameService=new GameService();
+        String gameByGameIdAndName = gameService.getGameByGameIdAndName(null, "Game A");
+        System.out.println("Game Name ____________________"+gameByGameIdAndName);
         try {
             connection = configuration.getConnection();
             String selectSQL = "SELECT * FROM users WHERE Email = ?";
