@@ -1,3 +1,4 @@
+
 package controller;
 
 import java.io.IOException;
@@ -11,20 +12,28 @@ import service.UserService;
 
 @WebServlet("/login")
 public class Login extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
+        
+        // Retrieve email and password from the request
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        
+        // Get user by email from the UserService
         UserService userService = new UserService();
         User user = userService.getUserByEmail(email);
-
-        if (user != null && password.equals(user.getPassword())) {
-            // Authentication successful
-            request.getSession().setAttribute("user", user); // Store user in session
-            response.sendRedirect(request.getContextPath() + "/dashboard.jsp"); // Redirect to dashboard or desired page
+        String password2 = user.getPassword();
+        // Check if user exists and password is correct
+        if (user != null && password.equalsIgnoreCase(password2)) {
+            request.getSession().setAttribute("user", user);
+            response.sendRedirect(request.getContextPath() + "/index.jsp");
         } else {
             // Authentication failed
-            response.sendRedirect(request.getContextPath() + "/login.jsp?error=invalidCredentials"); // Redirect with error message
+            // Redirect with error message
+            response.sendRedirect(request.getContextPath() + "/login.jsp?error=invalidCredentials");
         }
+        System.out.println("login s,mkdfhdskfhsdjkfndfhnsdfjk");
     }
 }
