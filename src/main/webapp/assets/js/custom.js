@@ -173,5 +173,6 @@ $(function () {
             // instead of a settings object
         ]
     });
+    
 
 });

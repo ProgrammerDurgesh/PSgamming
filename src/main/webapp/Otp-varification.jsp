@@ -53,122 +53,118 @@
 	<!-- Preloader end -->
 
 	<!-- Header -->
-	<section id="header" class="header_area">
+	    <section id="header" class="header_area">
 
-		<!-- NAV AREA CSS -->
-		<nav id="nav-part"
-			class="navbar header-nav other-nav custom_nav full_nav sticky-top navbar-expand-md hidden-main">
-			<div class="container">
+        <!-- NAV AREA CSS -->
+        <nav id="nav-part"
+            class="navbar header-nav other-nav custom_nav full_nav sticky-top navbar-expand-md hidden-main">
+            <div class="container">
 
 
-				<a class="navbar-brand" href="index.jsp">
-					<p class="logotxt">PSgaming</p> <!-- <img src="assets/images/header-logo.png" class="img-fluid logo-color" alt="logo"> -->
-				</a>
+                <a class="navbar-brand" href="index.jsp">
+                    <p class="logotxt">PSgaming</p>
+                    <!-- <img src="assets/images/header-logo.png" class="img-fluid logo-color" alt="logo"> -->
+                    </a>
 
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-					aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<div class="collapse navbar-collapse"
-					id="bs-example-navbar-collapse-1">
-					<div class="nav-res">
-						<ul class="nav navbar-nav m-auto menu-inner tog-nav">
-							<li><a href="#banner" class="active">Home</a></li>
-							<li><a href="https://playsmartgaming.com/about-us/">About
-									us</a></li>
-							<li><a href="https://playsmartgaming.com/services/">Services</a></li>
-							<li><a href="https://playsmartgaming.com/contact-us/">Contact
-									us</a></li>
-							<li class="dropdown"><a href="javascript:void(0)"
-								class="dropdown-toggle" data-toggle="dropdown" role="button"
-								aria-haspopup="true" aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu maindrop_menu">
-									<li><a href="https://playsmartgaming.com/refund-policy/">Refund
-											Policy</a></li>
-									<li><a href="https://playsmartgaming.com/shipping-policy/">Shipping
-											Policy</a></li>
-									<li><a
-										href="https://playsmartgaming.com/terms-and-policy/">Terms
-											and Policy</a></li>
-								</ul></li>
-							<li class="more-less"><i class="fa fa-align-right"></i> <i
-								class="fa fa-times"></i> <!-- <i class="fa-solid fa-bars"></i> -->
-							</li>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="nav-res">
+                        <ul class="nav navbar-nav m-auto menu-inner tog-nav">
+                            <li><a href="#banner" class="active">Home</a></li>
+                            <li><a href="https://playsmartgaming.com/about-us/">About us</a></li>
+                            <li><a href="https://playsmartgaming.com/services/">Services</a></li>
+                            <li><a href="https://playsmartgaming.com/contact-us/">Contact us</a></li>
+                            <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Pages</a>
+                                <ul class="dropdown-menu maindrop_menu">
+                                    <li><a href="https://playsmartgaming.com/refund-policy/">Refund Policy</a></li>
+                                    <li><a href="https://playsmartgaming.com/shipping-policy/">Shipping Policy</a></li>
+                                    <li><a href="https://playsmartgaming.com/terms-and-policy/">Terms and Policy</a></li>
+                                </ul>
+                            </li>
+                            <li class="more-less">
+                                <i class="fa fa-align-right"></i>
+                                <i class="fa fa-times"></i>
+                                <!-- <i class="fa-solid fa-bars"></i> -->
+                            </li>
 
-						</ul>
-					</div>
-					<!-- html for signup  -->
-					<ul class="login_menu navbar-right nav-sign">
-						<li class="login"><a href="signup.jsp"
-							class="btn-4 yellow-btn">Signup</a></li>
-						<li class="login"><a href="login.jsp" class="btn-4 pink-bg">Login</a></li>
-					</ul>
-					<!-- html for user dropdown  -->
-					<!-- <div class="nav-res userNav-res">
+                        </ul>
+                    </div>
+                    <!-- html for signup  -->
+                    <ul class="login_menu navbar-right nav-sign">
+                        <li class="login"><a href="signup.jsp" class="btn-4 yellow-btn">Signup</a></li>
+                        <li class="login"><a href="login.jsp" class="btn-4 pink-bg">Login</a></li>
+                    </ul>
+                    <!-- html for user dropdown  -->
+                     <div class="nav-res userNav-res">
                         <ul class="nav">
                             <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                     aria-haspopup="true" aria-expanded="false">Demo132</a>
                                 <ul class="dropdown-menu maindrop_menu">
-                                    <li><a href="javascript:void(0)">Logout</a></li>
+                                    	<li>
+                                			<form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
+		                                    	<a href="javascript:void(0)" onclick="logout()">Logout</a>
+		                                    </form>
+                                    	</li>
                                 </ul>
                             </li>
-
+						
                         </ul>
-                    </div> -->
-				</div>
-			</div>
-		</nav>
-		<!-- mobile menu -->
+                    </div> 
+                </div>
+            </div>
+        </nav>
+        <!-- mobile menu -->
 
-		<nav id='cssmenu' class="hidden mobile">
-			<div class="logo">
-				<a href="index.jsp" class="logo"> <!-- <img src="assets/images/header-logo.png" class="img-responsive" alt=""> -->
-					<p class="logotxt">PSgaming</p>
-				</a>
-			</div>
-			<div id="head-mobile"></div>
-			<div class="button">
-				<i class="more-less fa fa-align-right"></i>
-			</div>
-			<ul>
-				<li><a href="#banner" class="active">Home</a></li>
-				<li><a href="https://playsmartgaming.com/about-us/">About
-						us</a></li>
-				<li><a href="https://playsmartgaming.com/services/">Services</a></li>
-				<li><a href="https://playsmartgaming.com/contact-us/">Contact
-						us</a></li>
-				<li class="dropdown"><a href="" class="dropdown-toggle"
-					data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">Pages</a>
-					<ul class="dropdown-menu maindrop_menu">
-						<li><a href="https://playsmartgaming.com/refund-policy/">Refund
-								Policy</a></li>
-						<li><a href="https://playsmartgaming.com/shipping-policy/">Shipping
-								Policy</a></li>
-						<li><a href="https://playsmartgaming.com/terms-and-policy/">Terms
-								and Policy</a></li>
-					</ul></li>
+        <nav id='cssmenu' class="hidden mobile">
+            <div class="logo">
+                <a href="index.jsp" class="logo">
+                    <!-- <img src="assets/images/header-logo.png" class="img-responsive" alt=""> -->
+                    <p class="logotxt">PSgaming</p>
+                </a>
+            </div>
+            <div id="head-mobile"></div>
+            <div class="button"><i class="more-less fa fa-align-right"></i></div>
+            <ul>
+                <li><a href="#banner" class="active">Home</a></li>
+                <li><a href="https://playsmartgaming.com/about-us/">About us</a></li>
+                            <li><a href="https://playsmartgaming.com/services/">Services</a></li>
+                            <li><a href="https://playsmartgaming.com/contact-us/">Contact us</a></li>
+                <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu maindrop_menu">
+                        <li><a href="https://playsmartgaming.com/refund-policy/">Refund Policy</a></li>
+                        <li><a href="https://playsmartgaming.com/shipping-policy/">Shipping Policy</a></li>
+                        <li><a href="https://playsmartgaming.com/terms-and-policy/">Terms and Policy</a></li>
+                    </ul>
+                </li>
 
-				<!-- 
                 <li class="login"><a href="signup.jsp" class="btn-4 yellow-bg yellow-btn">Signup</a></li>
-                <li class="login"><a href="login.jsp" class="btn-4 yellow-bg">Login</a></li> -->
+                <li class="login"><a href="login.jsp" class="btn-4 yellow-bg">Login</a></li> 
 
-				<li class="dropdown userInfo"><a href=""
-					class="dropdown-toggle" data-toggle="dropdown" role="button"
-					aria-haspopup="true" aria-expanded="false">Demo132</a>
-					<ul class="dropdown-menu maindrop_menu">
-						<li><a href="javascript:void(0)">Logout</a></li>
-					</ul></li>
+                <li class="dropdown userInfo"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">Demo132</a>
+                <ul class="dropdown-menu maindrop_menu">
+                    <li>
+						<form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
+		                       <a href="javascript:void(0)" onclick="logout()">Logout</a>
+		                </form>
+					</li>
+                </ul>
+            </li>
 
-			</ul>
+            </ul>
 
-		</nav>
+        </nav>
 
-		<!-- End mobile menu -->
-	</section>
+        <!-- End mobile menu -->
+    </section>
 	<!-- Header End -->
 
 	<!-- contact-page Start -->
@@ -354,6 +350,37 @@
 	<script src="assets/js/menu.js"></script>
 	<script>
 		$(document).ready(function() {
+			
+			// js for login and signup ========================= //
+		    var userName = '<%= (session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getFirstName() : "" %>';
+		  if (userName !== '') {
+		      console.log("User is logged in: " + userName);
+		      $(".userNav-res").show();
+		      $(".login_menu").hide();
+		      $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
+		      $(".userInfo .dropdown-toggle").text(userName);
+		      $(".login").hide();
+		      $(".userInfo").show();
+		      $(".casino-btn a").attr("href", "user-detail.jsp");
+		      $(".cardBox a").attr("href", "user-detail.jsp");
+		      $(".casGnbn a").attr("href", "user-detail.jsp");
+		  }else{
+		      console.log("User is not logged in");
+		      $(".userNav-res").hide();
+		      $(".login_menu").show();
+		      $(".login").show();
+		      $(".userInfo").hide();
+		      $(".casino-btn a").attr("href", "login.jsp");
+		      $(".cardBox a").attr("href", "login.jsp");
+		      $(".casGnbn a").attr("href", "login.jsp");
+		  }
+		  
+		  function logout() {
+		      // Assuming you want to submit the form to the "/otp" endpoint
+		      document.forms["logoutForm"].submit();
+		  }
+			
+			
 			function validateOtp() {
 				var isValid = true;
 				$(".frmValidmsg").hide();
