@@ -1,4 +1,5 @@
 <!doctype html>
+<%@page import="common.User"%>
 <html lang="en">
 
 <head>
@@ -64,7 +65,7 @@
     <!-- Preloader end -->
 
     <!-- Header -->
-    <section id="header" class="header_area">
+        <section id="header" class="header_area">
 
         <!-- NAV AREA CSS -->
         <nav id="nav-part"
@@ -113,17 +114,21 @@
                         <li class="login"><a href="login.jsp" class="btn-4 pink-bg">Login</a></li>
                     </ul>
                     <!-- html for user dropdown  -->
-                    <!-- <div class="nav-res userNav-res">
+                     <div class="nav-res userNav-res">
                         <ul class="nav">
                             <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                     aria-haspopup="true" aria-expanded="false">Demo132</a>
                                 <ul class="dropdown-menu maindrop_menu">
-                                    <li><a href="javascript:void(0)">Logout</a></li>
+                                    	<li>
+                                			<form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
+		                                    	<a href="javascript:void(0)" onclick="logout()">Logout</a>
+		                                    </form>
+                                    	</li>
                                 </ul>
                             </li>
-
+						
                         </ul>
-                    </div> -->
+                    </div> 
                 </div>
             </div>
         </nav>
@@ -152,14 +157,17 @@
                     </ul>
                 </li>
 
-<!-- 
                 <li class="login"><a href="signup.jsp" class="btn-4 yellow-bg yellow-btn">Signup</a></li>
-                <li class="login"><a href="login.jsp" class="btn-4 yellow-bg">Login</a></li> -->
+                <li class="login"><a href="login.jsp" class="btn-4 yellow-bg">Login</a></li> 
 
                 <li class="dropdown userInfo"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Demo132</a>
                 <ul class="dropdown-menu maindrop_menu">
-                    <li><a href="javascript:void(0)">Logout</a></li>
+                    <li>
+						<form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
+		                       <a href="javascript:void(0)" onclick="logout()">Logout</a>
+		                </form>
+					</li>
                 </ul>
             </li>
 
@@ -198,7 +206,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Price</label>
-                                    <input type="text" class="form-control" name="gamePrice" id="gamePrice" placeholder="Enter price" readonly>
+                                    <input type="text" class="form-control" name="gamePrice" placeholder="Enter price">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Email</label>
@@ -210,12 +218,11 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Currency</label>
-                                    <input type="text" class="form-control" name="currency" id="currency" placeholder="Currency" readonly>
-                                    <!-- <select name="currency" class="form-control" id="currency">
+                                    <select name="currency" class="form-control" id="currency">
                                         <option>Select currency</option>
                                         <option value="USD">USD</option>
                                         <option value="INR">INR</option>
-                                    </select> -->
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Street address</label>
@@ -380,65 +387,91 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/menu.js"></script>
     <script>
-
-        $(document).ready(function () {        
-            $('#purchaseForm').on('submit', function (event) {
-                event.preventDefault(); // Prevent the default form submission
-                    
-                // Collect form data
-                var formData = {
-                    client: {
-                        email: $('input[name="email"]').val(),
-                        country: $('select[name="country"]').val(),
-                        city: $('input[name="city"]').val(),
-                        stateCode: $('input[name="stateCode"]').val(),
-                        street_address: $('input[name="streetAddress"]').val(),
-                        zip_code: $('input[name="zipCode"]').val(),
-                        phone: $('input[name="phone"]').val()
-                    },
-                    purchase: {
-                        currency: $('select[name="currency"]').val(),
-                        products: [
-                            {
-                                name: $('select[name="gameName"]').val(),
-                                price: $('input[name="gamePrice"]').val()
-                            }
-                        ]
-                    },
-                    // brand_id: "3ca22444-fa50-4749-8cee-9cb257b66f4a",
-                    brand_id: "c4003b2c-22d4-4dc1-ad0c-c6b54f8c9636",
-                    success_redirect: "http://localhost/PSgaming/success-data.jsp",
-                    // success_redirect: "https://games.playsmartgaming.com/success-data.html",
-                    failure_redirect: "http://localhost/PSgaming/failure-data.jsp",
-                    // failure_redirect: "https://games.playsmartgaming.com/failure-data.html",
-                };
-              //  console.log("formData :" , formData)
-                // Make AJAX POST request
-                $.ajax({
-                    // url: 'https://app.paysecure.net/api/v1/purchases',
-                    url: 'https://staging.paysecure.net/api/v1/purchases',
-                    method: 'POST',
-                    contentType: 'application/json',
-                    headers: {
-                        // "Authorization": "Bearer e4b7e915d7635bfff1db187a78a3eadd2af6dae7b8469187911dee90ad4a613b"
-                        "Authorization": "Bearer 13636c9f2c819de434cbe39ff63c8d5f4b36fa5a4ac1df2c4a7a86bfefe097d9"
-                    },
-                    data: JSON.stringify(formData),
-                    success: function (response) {
-                        localStorage.setItem('responseData', JSON.stringify(response));
-                         // Handle success by redirecting to checkout_url
-                         if (response.checkout_url) {
-                            window.location.href = response.checkout_url;
-                            // window.open(response.checkout_url, '_blank');
-                        }
-                    },
-                    error: function (error) {
-                        console.log('Error:', error);
-                        // Handle error
-                    }
-                });
-            });
-        });
+ // js for login and signup ========================= //
+    var userName = '<%= (session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getFirstName() : "" %>';
+  if (userName !== '') {
+      console.log("User is logged in: " + userName);
+      $(".userNav-res").show();
+      $(".login_menu").hide();
+      $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
+      $(".userInfo .dropdown-toggle").text(userName);
+      $(".login").hide();
+      $(".userInfo").show();
+      $(".casino-btn a").attr("href", "user-detail.jsp");
+      $(".cardBox a").attr("href", "user-detail.jsp");
+      $(".casGnbn a").attr("href", "user-detail.jsp");
+  }else{
+      console.log("User is not logged in");
+      $(".userNav-res").hide();
+      $(".login_menu").show();
+      $(".login").show();
+      $(".userInfo").hide();
+      $(".casino-btn a").attr("href", "login.jsp");
+      $(".cardBox a").attr("href", "login.jsp");
+      $(".casGnbn a").attr("href", "login.jsp");
+  }
+  
+  function logout() {
+      // Assuming you want to submit the form to the "/otp" endpoint
+      document.forms["logoutForm"].submit();
+  }
+  $(document).ready(function () {
+      $('#purchaseForm').on('submit', function (event) {
+          event.preventDefault(); // Prevent the default form submission
+              
+          // Collect form data
+          var formData = {
+              client: {
+                  email: $('input[name="email"]').val(),
+                  country: $('select[name="country"]').val(),
+                  city: $('input[name="city"]').val(),
+                  stateCode: $('input[name="stateCode"]').val(),
+                  street_address: $('input[name="streetAddress"]').val(),
+                  zip_code: $('input[name="zipCode"]').val(),
+                  phone: $('input[name="phone"]').val()
+              },
+              purchase: {
+                  currency: $('select[name="currency"]').val(),
+                  products: [
+                      {
+                          name: $('select[name="gameName"]').val(),
+                          price: $('input[name="gamePrice"]').val()
+                      }
+                  ]
+              },
+              brand_id: "3ca22444-fa50-4749-8cee-9cb257b66f4a",
+              // success_redirect: "https://your.success.redirect.com",
+              //   success_redirect: "http://localhost/gaming002/success-data.html",
+              success_redirect: "https://games.playsmartgaming.com/success-data.jsp",
+              // failure_redirect: "https://your.failure.redirect.com",
+              // failure_redirect: "http://localhost/gaming002/failure-data.html",
+              failure_redirect: "https://games.playsmartgaming.com/failure-data.jsp",
+          };
+        //  console.log("formData :" , formData)
+          // Make AJAX POST request
+          $.ajax({
+              url: 'https://app.paysecure.net/api/v1/purchases',
+              method: 'POST',
+              contentType: 'application/json',
+              headers: {
+                  "Authorization": "Bearer e4b7e915d7635bfff1db187a78a3eadd2af6dae7b8469187911dee90ad4a613b"
+              },
+              data: JSON.stringify(formData),
+              success: function (response) {
+                  localStorage.setItem('responseData', JSON.stringify(response));
+                   // Handle success by redirecting to checkout_url
+                   if (response.checkout_url) {
+                      window.location.href = response.checkout_url;
+                      // window.open(response.checkout_url, '_blank');
+                  }
+              },
+              error: function (error) {
+                  console.log('Error:', error);
+                  // Handle error
+              }
+          });
+      });
+  });
     </script>
 </body>
 

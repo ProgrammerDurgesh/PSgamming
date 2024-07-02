@@ -1,4 +1,5 @@
 <!doctype html>
+<%@page import="common.User"%>
 <html lang="en">
 
 <head>
@@ -86,7 +87,7 @@
     <!-- Preloader end -->
 
     <!-- Header -->
-    <section id="header" class="header_area">
+        <section id="header" class="header_area">
 
         <!-- NAV AREA CSS -->
         <nav id="nav-part"
@@ -135,17 +136,21 @@
                         <li class="login"><a href="login.jsp" class="btn-4 pink-bg">Login</a></li>
                     </ul>
                     <!-- html for user dropdown  -->
-                    <!-- <div class="nav-res userNav-res">
+                     <div class="nav-res userNav-res">
                         <ul class="nav">
                             <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                     aria-haspopup="true" aria-expanded="false">Demo132</a>
                                 <ul class="dropdown-menu maindrop_menu">
-                                    <li><a href="javascript:void(0)">Logout</a></li>
+                                    	<li>
+                                			<form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
+		                                    	<a href="javascript:void(0)" onclick="logout()">Logout</a>
+		                                    </form>
+                                    	</li>
                                 </ul>
                             </li>
-
+						
                         </ul>
-                    </div> -->
+                    </div> 
                 </div>
             </div>
         </nav>
@@ -174,14 +179,17 @@
                     </ul>
                 </li>
 
-<!-- 
                 <li class="login"><a href="signup.jsp" class="btn-4 yellow-bg yellow-btn">Signup</a></li>
-                <li class="login"><a href="login.jsp" class="btn-4 yellow-bg">Login</a></li> -->
+                <li class="login"><a href="login.jsp" class="btn-4 yellow-bg">Login</a></li> 
 
                 <li class="dropdown userInfo"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Demo132</a>
                 <ul class="dropdown-menu maindrop_menu">
-                    <li><a href="javascript:void(0)">Logout</a></li>
+                    <li>
+						<form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
+		                       <a href="javascript:void(0)" onclick="logout()">Logout</a>
+		                </form>
+					</li>
                 </ul>
             </li>
 
@@ -344,10 +352,35 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/menu.js"></script>
     <script>
-        // You can use JavaScript to dynamically fill in the order details
-        // document.getElementById('order-id').innerText = "123456";
-        // document.getElementById('product-name').innerText = "Game Name";
-        // document.getElementById('product-price').innerText = "$50.00";
+ // js for login and signup ========================= //
+    var userName = '<%= (session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getFirstName() : "" %>';
+  if (userName !== '') {
+      console.log("User is logged in: " + userName);
+      $(".userNav-res").show();
+      $(".login_menu").hide();
+      $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
+      $(".userInfo .dropdown-toggle").text(userName);
+      $(".login").hide();
+      $(".userInfo").show();
+      $(".casino-btn a").attr("href", "user-detail.jsp");
+      $(".cardBox a").attr("href", "user-detail.jsp");
+      $(".casGnbn a").attr("href", "user-detail.jsp");
+  }else{
+      console.log("User is not logged in");
+      $(".userNav-res").hide();
+      $(".login_menu").show();
+      $(".login").show();
+      $(".userInfo").hide();
+      $(".casino-btn a").attr("href", "login.jsp");
+      $(".cardBox a").attr("href", "login.jsp");
+      $(".casGnbn a").attr("href", "login.jsp");
+  }
+  
+  function logout() {
+      // Assuming you want to submit the form to the "/otp" endpoint
+      document.forms["logoutForm"].submit();
+  }
+  
         const responseData = localStorage.getItem('responseData');
         setTimeout(function(){
 

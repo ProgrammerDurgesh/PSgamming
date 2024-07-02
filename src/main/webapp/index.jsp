@@ -589,32 +589,36 @@
     <!-- custom -->
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/menu.js"></script>
-<script>
-
-
-
+    <script>
+ // js for login and signup ========================= //
     var userName = '<%= (session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getFirstName() : "" %>';
-    if (userName !== '') {
-        console.log("User is logged in: " + userName);
-        $(".userNav-res").show();
-        $(".login_menu").hide();
-        $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
-        $(".userInfo .dropdown-toggle").text(userName);
-        $(".login").hide();
-        $(".userInfo").show();
-    }else{
-        console.log("User is not logged in");
-        $(".userNav-res").hide();
-        $(".login_menu").show();
-        $(".login").show();
-        $(".userInfo").hide();
-    }
-    
-    function logout() {
-        // Assuming you want to submit the form to the "/otp" endpoint
-        document.forms["logoutForm"].submit();
-    }
-</script>
+  if (userName !== '') {
+      console.log("User is logged in: " + userName);
+      $(".userNav-res").show();
+      $(".login_menu").hide();
+      $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
+      $(".userInfo .dropdown-toggle").text(userName);
+      $(".login").hide();
+      $(".userInfo").show();
+      $(".casino-btn a").attr("href", "user-detail.jsp");
+      $(".cardBox a").attr("href", "user-detail.jsp");
+      $(".casGnbn a").attr("href", "user-detail.jsp");
+  }else{
+      console.log("User is not logged in");
+      $(".userNav-res").hide();
+      $(".login_menu").show();
+      $(".login").show();
+      $(".userInfo").hide();
+      $(".casino-btn a").attr("href", "login.jsp");
+      $(".cardBox a").attr("href", "login.jsp");
+      $(".casGnbn a").attr("href", "login.jsp");
+  }
+  
+  function logout() {
+      // Assuming you want to submit the form to the "/otp" endpoint
+      document.forms["logoutForm"].submit();
+  }
+    </script>
 </body>
 
 </html>
