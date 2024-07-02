@@ -13,6 +13,7 @@
         Country: <input type="text" name="country"><br>
         City: <input type="text" name="city"><br>
         Mobile Number: <input type="text" name="mobileNumber"><br>
+        Password : <input type="text" name="password"><br>
         <input type="submit" value="Sign Up">
     </form>
 </body>
