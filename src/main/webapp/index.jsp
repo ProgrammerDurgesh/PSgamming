@@ -113,14 +113,17 @@
                     <!-- html for user dropdown  -->
                      <div class="nav-res userNav-res">
                         <ul class="nav">
-                        <form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
-                            <li class="dropdown"><a href="javascript:void(0)" onclick="logout()" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                     aria-haspopup="true" aria-expanded="false">Demo132</a>
                                 <ul class="dropdown-menu maindrop_menu">
-                                    <li><a href="javascript:void(0)" onclick="logout()">Logout</a></li>
+                                    	<li>
+                                			<form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
+		                                    	<a href="javascript:void(0)" onclick="logout()">Logout</a>
+		                                    </form>
+                                    	</li>
                                 </ul>
                             </li>
-						</form>
+						
                         </ul>
                     </div> 
                 </div>
@@ -151,14 +154,17 @@
                     </ul>
                 </li>
 
-<!-- 
                 <li class="login"><a href="signup.jsp" class="btn-4 yellow-bg yellow-btn">Signup</a></li>
-                <li class="login"><a href="login.jsp" class="btn-4 yellow-bg">Login</a></li> -->
+                <li class="login"><a href="login.jsp" class="btn-4 yellow-bg">Login</a></li> 
 
                 <li class="dropdown userInfo"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Demo132</a>
                 <ul class="dropdown-menu maindrop_menu">
-                    <li><a href="javascript:void(0)">Logout</a></li>
+                    <li>
+						<form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
+		                       <a href="javascript:void(0)" onclick="logout()">Logout</a>
+		                </form>
+					</li>
                 </ul>
             </li>
 
@@ -182,7 +188,7 @@
                         <p>playsmartgaming.com Publishes some of the highest quality games available online. Our massive selection of games include some of the most played genres online, the most popular being <b> racing games, slot games, action games</b>.</p>
 
                         <div class="casino-btn">
-                            <a href="user-detail.jsp" class="btn-4 yellow-btn">play now</a>
+                            <a href="login.jsp" class="btn-4 yellow-btn">play now</a>
                         </div>
                     </div>
 
@@ -205,7 +211,7 @@
                         <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
                         <p>Explore quality slot games anytime and anywhere. From classic slot machines to modern masterpieces, enjoy exciting visuals and larger-than-life graphics with every spin. With their fun and exciting themes, spectacular graphics, lively sound effects and progressive jackpots, there’s rarely a dull moment with our online casino slots. Their easy-to-learn rules make them simple to enjoy, whether you’re completely new to the world of slots or an experienced player.</p>
                         <div class="casino-btn">
-                            <a href="user-detail.jsp" class="btn-4 yellow-btn">play now</a>
+                            <a href="login.jsp" class="btn-4 yellow-btn">play now</a>
                         </div>
                     </div>
                 </div>
@@ -217,7 +223,7 @@
         <div class="container">
             <div class="control-inner gdpRow" id="htrt">
                 <div class="cardBox">
-                    <a href="user-detail.jsp">
+                    <a href="login.jsp">
                         <img class="img-fluid" src="assets/images/bingo-game-slider01.png" alt="" />
                         <div class="gamTTl">
                             <p>Bingo slot</p>
@@ -225,7 +231,7 @@
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="user-detail.jsp">
+                    <a href="login.jsp">
                         <img class="img-fluid" src="assets/images/shield-slot-game-slider02.png" alt="" />
                         <div class="gamTTl">
                             <p>shield slot</p>
@@ -233,7 +239,7 @@
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="user-detail.jsp">
+                    <a href="login.jsp">
                         <img class="img-fluid" src="assets/images/horse-race-game-slider03.png" alt="" />
                         <div class="gamTTl">
                             <p>Horse race slot</p>
@@ -241,7 +247,7 @@
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="user-detail.jsp">
+                    <a href="login.jsp">
                         <img class="img-fluid" src="assets/images/fruit-slot-machine-game-slider04.png" alt="" />
                         <div class="gamTTl">
                             <p>Fruit slot</p>
@@ -249,7 +255,7 @@
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="user-detail.jsp">
+                    <a href="login.jsp">
                         <img class="img-fluid" src="assets/images/amazing-slot-game-slider05.png" alt="" />
                         <div class="gamTTl">
                             <p>Amazing slot</p>
@@ -257,7 +263,7 @@
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="user-detail.jsp">
+                    <a href="login.jsp">
                         <img class="img-fluid" src="assets/images/bingo-game-slider01.png" alt="" />
                         <div class="gamTTl">
                             <p>Bingo slot</p>
@@ -265,7 +271,7 @@
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="user-detail.jsp">
+                    <a href="login.jsp">
                         <img class="img-fluid" src="assets/images/fruit-slot-machine-game-slider04.png" alt="" />
                         <div class="gamTTl">
                             <p>Fruit slot</p>
@@ -301,7 +307,7 @@
                                 <div class="overlay-text">
                                     <div class="port-text">
                                         <div class="casino-btn">
-                                            <a href="user-detail.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
+                                            <a href="login.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
                                         </div>
                                         <div class="port-text-btm">
                                             <input type="hidden" name="shieldSlot" />
@@ -321,7 +327,7 @@
                                 <div class="overlay-text">
                                     <div class="port-text">
                                         <div class="casino-btn">
-                                            <a href="user-detail.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
+                                            <a href="login.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
                                         </div>
                                         <div class="port-text-btm">
                                             <input type="hidden" name="bingoSlot" id="bingoSlot" value="bingoSlot" />
@@ -341,7 +347,7 @@
                                 <div class="overlay-text">
                                     <div class="port-text">
                                         <div class="casino-btn">
-                                            <a href="user-detail.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
+                                            <a href="login.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
                                         </div>
                                         <div class="port-text-btm">
                                             <h3>Fruit slot</h3>
@@ -360,7 +366,7 @@
                                 <div class="overlay-text">
                                     <div class="port-text">
                                         <div class="casino-btn">
-                                            <a href="user-detail.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
+                                            <a href="login.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
                                         </div>
                                         <div class="port-text-btm">
                                             <h3>Horse race slot</h3>
@@ -379,7 +385,7 @@
                                 <div class="overlay-text">
                                     <div class="port-text">
                                         <div class="casino-btn">
-                                            <a href="user-detail.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
+                                            <a href="login.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
                                         </div>
                                         <div class="port-text-btm">
                                             <h3>Amazing slot</h3>
@@ -422,22 +428,22 @@
                 <div class="col-md-5 mx-auto no-padding casGnbn">
                     <div class="row">
                         <div class="col-md-6">
-                            <a href="user-detail.jsp">
+                            <a href="login.jsp">
                                 <img src="assets/images/bingo-game-slider01.png" class="img-fluid" alt="effect">
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <a href="user-detail.jsp">
+                            <a href="login.jsp">
                                 <img src="assets/images/shield-slot-game-slider02.png" class="img-fluid" alt="effect">
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <a href="user-detail.jsp">
+                            <a href="login.jsp">
                                 <img src="assets/images/horse-race-game-slider03.png" class="img-fluid" alt="effect">
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <a href="user-detail.jsp">
+                            <a href="login.jsp">
                                 <img src="assets/images/fruit-slot-machine-game-slider04.png" class="img-fluid" alt="effect">
                             </a>
                         </div>
@@ -584,16 +590,24 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/menu.js"></script>
 <script>
+
+
+
     var userName = '<%= (session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getFirstName() : "" %>';
     if (userName !== '') {
         console.log("User is logged in: " + userName);
         $(".userNav-res").show();
         $(".login_menu").hide();
         $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
-    } else {
+        $(".userInfo .dropdown-toggle").text(userName);
+        $(".login").hide();
+        $(".userInfo").show();
+    }else{
         console.log("User is not logged in");
         $(".userNav-res").hide();
         $(".login_menu").show();
+        $(".login").show();
+        $(".userInfo").hide();
     }
     
     function logout() {
