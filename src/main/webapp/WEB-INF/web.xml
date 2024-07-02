@@ -5,13 +5,4 @@
     id="WebApp_ID" version="4.0">
 
     <display-name>paysecuregaming</display-name>
-<servlet>
-    <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>controller.Login</servlet-class>
-</servlet>
-<servlet-mapping>
-    <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/login</url-pattern>
-</servlet-mapping>
-
 </web-app>

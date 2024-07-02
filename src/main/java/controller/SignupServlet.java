@@ -1,12 +1,12 @@
 package controller;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
 import common.DatabaseConfiguration;
 import common.EmailConfig;
 
@@ -41,16 +41,16 @@ public class SignupServlet extends HttpServlet {
 	        System.out.println(mobileNumber);
 	        System.out.println(password);
 	        System.out.println(otp);
-	        //String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+
+	        // Assuming your database insertion and email sending logic is correct
 	        DatabaseConfiguration configuration = new DatabaseConfiguration();
 	        Connection connection = null;
 
 	        try {
 	            connection = configuration.getConnection();
-	            System.out.println(connection);
 
 	            // Insert into database
-	            String insertSQL = "INSERT INTO users (FirstName, LastName, Email, Country, City, Password, MobileNumber) VALUES (?, ?, ?, ?, ?, ?, ?)";
+	            String insertSQL = "INSERT INTO users (FirstName, LastName, Email, Country, City, Password, MobileNumber, otp) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 	            PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
 	            preparedStatement.setString(1, firstName);
 	            preparedStatement.setString(2, lastName);
@@ -59,7 +59,9 @@ public class SignupServlet extends HttpServlet {
 	            preparedStatement.setString(5, city);
 	            preparedStatement.setString(6, password);
 	            preparedStatement.setString(7, mobileNumber);
+	            preparedStatement.setString(8, otp);
 	            preparedStatement.executeUpdate();
+	            EmailConfig.sendEmail(email, "OTP Verification", otp);
 	        } catch (SQLException e) {
 	            e.printStackTrace();
 	        } finally {
@@ -71,26 +73,12 @@ public class SignupServlet extends HttpServlet {
 	                }
 	            }
 	        }
-
-
-	        // Send OTP email
-	        EmailConfig.sendEmail(email, "OTP Verification", otp);
-
-	        // Respond with HTML
-	        response.setContentType("text/html");
-	        PrintWriter out = response.getWriter();
-	        out.println("<html><body>");
-	        out.println("<h1>Signup Successful</h1>");
-	        out.println("<p>First Name: " + firstName + "</p>");
-	        out.println("<p>Last Name: " + lastName + "</p>");
-	        out.println("<p>Email: " + email + "</p>");
-	        out.println("<p>Country: " + country + "</p>");
-	        out.println("<p>City: " + city + "</p>");
-	        out.println("<p>Password: " + password + "</p>");
-	        if (mobileNumber != null && !mobileNumber.isEmpty()) {
-	            out.println("<p>Mobile Number: " + mobileNumber + "</p>");
-	        }
-	        out.println("</body></html>");
+	        // Redirect to OTP verification page
+	        String otpVerificationPage = "Otp-varification.jsp";
+	        request.setAttribute("email", email);
+	        System.out.println("the email is:"+email);
+	        RequestDispatcher dispatcher = request.getRequestDispatcher(otpVerificationPage);
+	        dispatcher.forward(request, response);
 	    }
 
 
