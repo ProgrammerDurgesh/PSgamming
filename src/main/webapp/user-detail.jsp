@@ -190,7 +190,7 @@
                         <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
                     </div>
                     <div class="faq-form">
-                        <form id="purchaseForm">
+                        <form id="purchaseForm"  action="${pageContext.request.contextPath}/userInfo" method="post">
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label>Game</label>
@@ -206,7 +206,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Price</label>
-                                    <input type="text" class="form-control" name="gamePrice" placeholder="Enter price">
+                                    <input type="text" class="form-control" name="price" placeholder="Enter price">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Email</label>
@@ -214,7 +214,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Phone</label>
-                                    <input type="text" class="form-control" name="phone" placeholder="Enter phone">
+                                    <input type="text" class="form-control" name="phoneNumber" placeholder="Enter phone">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Currency</label>
@@ -247,7 +247,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Zip code</label>
-                                    <input type="text" class="form-control" name="zipCode" placeholder="Enter zip code">
+                                    <input type="text" class="form-control" name="zipcode" placeholder="Enter zip code">
                                 </div>
                             </div>
                             <div class="row">
@@ -427,15 +427,15 @@
                   city: $('input[name="city"]').val(),
                   stateCode: $('input[name="stateCode"]').val(),
                   street_address: $('input[name="streetAddress"]').val(),
-                  zip_code: $('input[name="zipCode"]').val(),
-                  phone: $('input[name="phone"]').val()
+                  zip_code: $('input[name="zipcode"]').val(),
+                  phone: $('input[name="phoneNumber"]').val()
               },
               purchase: {
                   currency: $('select[name="currency"]').val(),
                   products: [
                       {
                           name: $('select[name="gameName"]').val(),
-                          price: $('input[name="gamePrice"]').val()
+                          price: $('input[name="price"]').val()
                       }
                   ]
               },
