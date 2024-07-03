@@ -1,4 +1,5 @@
 <!doctype html>
+<%@page import="common.User"%>
 <html lang="en">
 
 <head>

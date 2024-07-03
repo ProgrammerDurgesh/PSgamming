@@ -1,23 +1,20 @@
 package controller;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import common.DatabaseConfiguration;
-import common.EmailConfig;
-
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Random;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/signup")
+import common.DatabaseConfiguration;
+import common.EmailConfig;
+
+/*@WebServlet("/signup")*/
 public class SignupServlet extends HttpServlet {
 	 private static final String NUMBERS = "0123456789";
 	    private static final int OTP_LENGTH = 6;
@@ -31,17 +28,6 @@ public class SignupServlet extends HttpServlet {
 	        String mobileNumber = request.getParameter("mobileNumber");
 	        String password = request.getParameter("password");
 	        String otp = this.generateOTP();
-
-	        // Print to console (for debugging)
-	        System.out.println(firstName);
-	        System.out.println(lastName);
-	        System.out.println(email);
-	        System.out.println(country);
-	        System.out.println(city);
-	        System.out.println(mobileNumber);
-	        System.out.println(password);
-	        System.out.println(otp);
-
 	        // Assuming your database insertion and email sending logic is correct
 	        DatabaseConfiguration configuration = new DatabaseConfiguration();
 	        Connection connection = null;
