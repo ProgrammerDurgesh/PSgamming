@@ -54,7 +54,7 @@
 	<!-- Preloader end -->
 
 	<!-- Header -->
-	    <section id="header" class="header_area">
+	   <section id="header" class="header_area">
 
         <!-- NAV AREA CSS -->
         <nav id="nav-part"
@@ -77,16 +77,13 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <div class="nav-res">
                         <ul class="nav navbar-nav m-auto menu-inner tog-nav">
-                            <li><a href="#banner" class="active">Home</a></li>
-                            <li><a href="https://playsmartgaming.com/about-us/">About us</a></li>
-                            <li><a href="https://playsmartgaming.com/services/">Services</a></li>
-                            <li><a href="https://playsmartgaming.com/contact-us/">Contact us</a></li>
+                            <li><a href="index.jsp" class="active">Home</a></li>
+                            <li><a href="about-us.jsp">About us</a></li>
+                            <li><a href="contact-us.jsp">Contact us</a></li>
                             <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                     aria-haspopup="true" aria-expanded="false">Pages</a>
                                 <ul class="dropdown-menu maindrop_menu">
-                                    <li><a href="https://playsmartgaming.com/refund-policy/">Refund Policy</a></li>
-                                    <li><a href="https://playsmartgaming.com/shipping-policy/">Shipping Policy</a></li>
-                                    <li><a href="https://playsmartgaming.com/terms-and-policy/">Terms and Policy</a></li>
+                                    <li><a href="term-policy.jsp">Terms and Policy</a></li>
                                 </ul>
                             </li>
                             <li class="more-less">
@@ -133,16 +130,13 @@
             <div id="head-mobile"></div>
             <div class="button"><i class="more-less fa fa-align-right"></i></div>
             <ul>
-                <li><a href="#banner" class="active">Home</a></li>
-                <li><a href="https://playsmartgaming.com/about-us/">About us</a></li>
-                            <li><a href="https://playsmartgaming.com/services/">Services</a></li>
-                            <li><a href="https://playsmartgaming.com/contact-us/">Contact us</a></li>
+                <li><a href="index.jsp" class="active">Home</a></li>
+                <li><a href="about-us.jsp">About us</a></li>
+                <li><a href="contact-us.jsp">Contact us</a></li>
                 <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
                         aria-haspopup="true" aria-expanded="false">Pages</a>
                     <ul class="dropdown-menu maindrop_menu">
-                        <li><a href="https://playsmartgaming.com/refund-policy/">Refund Policy</a></li>
-                        <li><a href="https://playsmartgaming.com/shipping-policy/">Shipping Policy</a></li>
-                        <li><a href="https://playsmartgaming.com/terms-and-policy/">Terms and Policy</a></li>
+                        <li><a href="term-policy.jsp">Terms and Policy</a></li>
                     </ul>
                 </li>
 
@@ -205,130 +199,106 @@
 	<!-- contact-page End -->
 
 	<!-- Casino Contact start -->
-	<section id="contact-us" class="contact-us back-dark contact section">
-		<div class="container">
-			<div class="row">
+    <section id="contact-us" class="contact-us back-dark contact section">
+        <div class="container">
+            <div class="row">
 
-				<div class="col-lg-5 ms-auto col-md-6">
-					<div class="contact-about">
-						<div class="heading">
-							<h2>ABOUT PS Gaming</h2>
-							<img src="assets/images/heading-border-effect.png"
-								class="img-fluid" alt="effect">
-						</div>
-						<p class="mb30">
-							Our massive selection of games include some of the most played
-							genres online, the most popular being <b> racing games, slot
-								games, action games</b> and many more.
-						</p>
-					</div>
-					<div class="payments socialFtr" style="padding-top: 35px;">
-						<div class="heading">
-							<h2>Social links</h2>
-							<img src="assets/images/heading-border-effect.png"
-								class="img-fluid" alt="effect">
-						</div>
-						<ul>
-							<li><a href="#" target="_blank"><i
-									class="fa-brands fa-facebook"></i></a></li>
-							<li><a href="#" target="_blank"><i
-									class="fa-brands fa-instagram"></i></a></li>
-							<li><a href="#" target="_blank"><i
-									class="fa-brands fa-twitter"></i></a></li>
-							<li><a href="#" target="_blank"><i
-									class="fa-brands fa-linkedin"></i></a></li>
-							<li><a href="#" target="_blank"><i
-									class="fa-brands fa-youtube"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-5 ml-auto col-md-6">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="payments">
-								<div class="heading">
-									<h2>Payment Methods</h2>
-									<img src="assets/images/heading-border-effect.png"
-										class="img-fluid" alt="effect">
-								</div>
-								<ul>
-									<li><a href="#"><img
-											src="assets/images/payment-image-1.jpg" class="img-fluid"
-											alt="effect"></a></li>
-									<li><a href="#"><img
-											src="assets/images/payment-image-2.jpg" class="img-fluid"
-											alt="effect"></a></li>
-									<li><a href="#"><img
-											src="assets/images/payment-image-3.jpg" class="img-fluid"
-											alt="effect"></a></li>
-									<li><a href="#"><img
-											src="assets/images/payment-image-4.jpg" class="img-fluid"
-											alt="effect"></a></li>
-									<li><a href="#"><img
-											src="assets/images/payment-image-5.jpg" class="img-fluid"
-											alt="effect"></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="subscribe">
-								<div class="heading">
-									<h3>Subscribe for offers</h3>
-									<img src="assets/images/heading-border-effect.png"
-										class="img-fluid" alt="effect">
-								</div>
-								<div class="sub-form">
-									<form>
-										<div class="form-group col-sm-12">
-											<input type="text" class="form-control" name="email"
-												placeholder="Enter Your Email">
-										</div>
-										<div class="casino-btn newsletter">
-											<a href="#" class="btn-4 yellow-btn">send</a>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row control-pad">
-				<div class="border-effect1">
-					<img src="assets/images/border-effect.png" class="img-fluid"
-						alt="effect">
-				</div>
-				<div class="border-effect2">
-					<img src="assets/images/border-effect.png" class="img-fluid"
-						alt="effect">
-				</div>
-			</div>
-			<div class="row justify-content-center text-center">
-				<div class="col-md-12 bot-menu">
-					<div class="foot-menu">
-						<ul>
-							<li><a href="https://playsmartgaming.com/about-us/" class="">About
-									Us</a></li>
-							<li><a href="https://playsmartgaming.com/refund-policy/">Refund
-									Policy</a></li>
-							<li><a href="https://playsmartgaming.com/shipping-policy/"
-								class="active">Shipping Policy</a></li>
-							<li><a href="https://playsmartgaming.com/terms-and-policy/">Terms
-									and Policy</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="copy-right">
-						<h6>Copyright 2024. All rights reserved by play Smart gaming</h6>
-					</div>
-				</div>
-			</div>
-		</div>
+                <div class="col-lg-5 ms-auto col-md-6">
+                    <div class="contact-about">
+                        <div class="heading">
+                            <h2>ABOUT PS Gaming</h2>
+                            <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
+                        </div>
+                        <p class="mb30">Our massive selection of games include some of the most played genres online, the most popular being <b> racing games, slot games, action games</b> and many more.</p>
+                    </div>
+                    <div class="payments socialFtr" style="padding-top:35px;">
+                        <div class="heading">
+                            <h2>Social links</h2>
+                            <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
+                        </div>
+                        <ul>
+                            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 ml-auto col-md-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="payments">
+                                <div class="heading">
+                                    <h2>Payment Methods</h2>
+                                    <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
+                                </div>
+                                <ul>
+                                    <li><a href="#"><img src="assets/images/payment-image-1.jpg" class="img-fluid"
+                                                alt="effect"></a></li>
+                                    <li><a href="#"><img src="assets/images/payment-image-2.jpg" class="img-fluid"
+                                                alt="effect"></a></li>
+                                    <li><a href="#"><img src="assets/images/payment-image-3.jpg" class="img-fluid"
+                                                alt="effect"></a></li>
+                                    <li><a href="#"><img src="assets/images/payment-image-4.jpg" class="img-fluid"
+                                                alt="effect"></a></li>
+                                    <li><a href="#"><img src="assets/images/payment-image-5.jpg" class="img-fluid"
+                                                alt="effect"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="subscribe">
+                                <div class="heading">
+                                    <h3>Subscribe for offers</h3>
+                                    <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
+                                </div>
+                                <div class="sub-form">
+                                    <form>
+                                        <div class="form-group col-sm-12">
+                                            <input type="text" class="form-control" name="email"
+                                                placeholder="Enter Your Email">
+                                        </div>
+                                        <div class="casino-btn newsletter">
+                                            <a href="#" class="btn-4 yellow-btn">send</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row control-pad">
+                <div class="border-effect1">
+                    <img src="assets/images/border-effect.png" class="img-fluid" alt="effect">
+                </div>
+                <div class="border-effect2">
+                    <img src="assets/images/border-effect.png" class="img-fluid" alt="effect">
+                </div>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="col-md-12 bot-menu">
+                    <div class="foot-menu">
+                        <ul>
+                            <li><a href="index.jsp">Home</a></li>
+                            <li><a href="about-us.jsp" class="">About Us</a></li>
+                            <li><a href="contact-us.jsp" class="active">Contact Us</a></li>
+                            <li><a href="term-policy.jsp">Terms and Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="copy-right">
+                        <h6>Copyright 2024. All rights reserved by play Smart gaming</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-	</section>
+    </section>
 	<!-- Casino Contact End -->
 	<!-- jQuery -->
 	<script src="assets/js/jquery-3.2.1.min.js"></script>

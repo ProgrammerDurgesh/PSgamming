@@ -1,10 +1,11 @@
 <!doctype html>
+<%@page import="common.User"%>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Online Gaming</title>
+    <title>Online Gaming- About Us</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!---Font Icon-->
@@ -29,28 +30,6 @@
     <!-- Theme Style -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
-    <style>
-        .payMentSuccessBox {
-            background-color: #1f0448;
-            max-width: 450px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .payMentSuccessBox .card-body h3 {
-            color: #fff;
-            font-family: 'Anton', sans-serif;
-            font-size: 24px;
-            line-height: 34px;
-            margin-bottom: 15px;
-        }
-
-        .payMentSuccessBox .card-body .order-details p {
-            font-family: "Nunito";
-            margin-bottom: 8px;
-            padding-bottom: 0;
-        }
-    </style>
 
 </head>
 
@@ -62,7 +41,6 @@
     <!-- back to top end -->
 
     <!-- Preloader Start -->
-
     <div class="preloader">
         <div class="loader">
             <span></span>
@@ -82,11 +60,10 @@
             <span></span>
         </div>
     </div>
-
     <!-- Preloader end -->
 
     <!-- Header -->
- <section id="header" class="header_area">
+     <section id="header" class="header_area">
 
         <!-- NAV AREA CSS -->
         <nav id="nav-part"
@@ -194,34 +171,133 @@
     </section>
     <!-- Header End -->
 
-    <!-- contact-page Start -->
-    <section id="contact-page" class="contact-page section">
+<section id="contact-page" class="contact-page section refundPolicy-sec">
         <div class="container">
 
             <div class="row">
-                <div class="col-md-9 mx-auto">
+                <div class="col-md-12 mx-auto">
                     <div class="heading text-center">
-                        <h2>Payment Successful</h2>
+                        <h2>Term & policy</h2>
                         <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
                     </div>
-                    <div class="card payMentSuccessBox ">
-                        <div class="card-body">
-                            <!-- <h1 class="success-message">Payment Successful!</h1> -->
-                            <h3>Thank you for your purchase.</h3>
-                            <!-- <div class="order-details">
-                                <p>Order ID: <span id="order-id"></span></p>
-                                <p>Product: <span id="product-name"></span></p>
-                                <p>Price: <span id="product-price"></span></p>
-                            </div> -->
-                        </div>
-                    </div>
-
+                    <p>Welcome to PlaySmart Gaming, operated by CP Technology and Integrated Systems Limited. Please
+                        take the time to read through our Terms and Policy to understand your rights and obligations as
+                        a user of our services. By accessing or using our website and services, you agree to comply with
+                        these terms and policies.
+                    </p>
+                    <h2>TERMS OF SERVICE</h2>
+                    <h2><i>1. ACCEPTANCE OF TERMS</i></h2>
+                    <p>By accessing and using PlaySmart Gaming, you agree to comply with and be bound by these terms. If
+                        you do not agree with any part of these terms, please do not use our services.</p>
+                    <h2><i>2. USER ACCOUNTS</i></h2>
+                    <p>To access certain features, you may be required to create an account. You are responsible for
+                        maintaining the confidentiality of your account information, including your password, and for
+                        all activities under your account.</p>
+                    <h2><i>3. USER CONDUCT</i></h2>
+                    <p>You agree not to use our services for any unlawful or prohibited activities. This includes but is
+                        not limited to:</p>
+                    <ul>
+                        <li>
+                            Exploiting, harming, or attempting to exploit or harm minors in any way.
+                        </li>
+                        <li>Sending, knowingly receiving, uploading, downloading, using, or reusing any material that
+                            violates our content standards.</li>
+                        <li>Transmitting any unsolicited or unauthorized advertising, promotional materials, or any
+                            other form of solicitation.</li>
+                        <li>Engaging in any activity that could disable, overburden, or impair the functioning of our
+                            services.</li>
+                    </ul>
+                    <h2><i>4. INTELLECTUAL PROPERTY</i></h2>
+                    <p>All content, features, and functionality (including but not limited to all information, software,
+                        text, displays, images, video, and audio, and the design, selection, and arrangement thereof)
+                        are owned by CP Technology and Integrated Systems Limited, its licensors, or other providers of
+                        such material. Reproduction, distribution, modification, creation of derivative works, public
+                        display, public performance, republishing, downloading, storing, or transmitting any material on
+                        our website without our prior written consent is prohibited.</p>
+                    <h2><i>5. TERMINATION OF USE</i></h2>
+                    <p>We reserve the right to terminate or suspend access to our services immediately, without prior
+                        notice or liability, for any reason, including but not limited to a breach of these Terms.</p>
+                    <h2><i>6. DISCLAIMER OF WARRANTIES</i></h2>
+                    <p>Our services are provided on an “as is” and “as available” basis. We make no warranties,
+                        expressed or implied, about the reliability, accuracy, or availability of our services. You use
+                        our services at your own risk.</p>
+                    <h2><i>7. LIMITATION OF LIABILITY</i></h2>
+                    <p>In no event shall CP Technology and Integrated Systems Limited, nor its directors, employees,
+                        partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special,
+                        consequential, or punitive damages, including without limitation, loss of profits, data, use,
+                        goodwill, or other intangible losses, resulting from:</p>
+                    <ul>
+                        <li>Your use or inability to use our services.</li>
+                        <li>Any unauthorized access to or use of our servers and data.</li>
+                        <li>Any interruption or cessation of transmission to or from our services.</li>
+                    </ul>
+                    <h2><i>8. CHANGES TO TERMS</i></h2>
+                    <p>We reserve the right to modify or replace these Terms at any time. If a revision is material, we
+                        will provide at least 30 days’ notice before any new terms take effect. What constitutes a
+                        material change will be determined at our sole discretion.</p>
+					<h2><i>9. NO REWARD</i></h2>
+					<p>The website is provided as is and as available, without any warranty or guaranty of any kind, either expressed or implied. No money will be awarded in any scenario for playing and/or winning games on the website.</p>
+                    <h2>PRIVACY POLICY</h2>
+                    <h2><i>1. INFORMATION COLLECTION</i></h2>
+                    <p>We collect various types of information in connection with the services we provide, including:
+                    </p>
+                    <ul>
+                        <li>Personal Information: Information that can be used to identify you, such as your name, email
+                            address, and phone number.</li>
+                        <li>Non-Personal Information: Data that is in a form that does not, on its own, permit direct
+                            association with any specific individual.</li>
+                        <li>Usage Data: Details of your use of our services, including traffic data, location data,
+                            logs, and other communication data.</li>
+                    </ul>
+                    <h2><i>2. USE OF INFORMATION</i></h2>
+                    <p>We use the information we collect to:</p>
+                    <ul>
+                        <li>Provide, maintain, and improve our services.</li>
+                        <li>Personalize your experience.</li>
+                        <li>Communicate with you, including sending promotional materials and updates.</li>
+                        <li>Monitor and analyze trends, usage, and activities in connection with our services.</li>
+                    </ul>
+                    <h2><i>3. SHARING OF INFORMATION</i></h2>
+                    <p>We do not share your personal information with third parties except in the following
+                        circumstances:</p>
+                    <ul>
+                        <li>With Your Consent: We may share your information with third parties if you have given us
+                            permission to do so.</li>
+                        <li>Service Providers: We may share information with third-party vendors, service providers, and
+                            other partners who perform services on our behalf, such as payment processing, data
+                            analysis, and customer service.</li>
+                        <li>Legal Requirements: We may disclose your information if required to do so by law or in the
+                            good-faith belief that such action is necessary to comply with legal obligations, protect
+                            and defend our rights or property, or act to protect the safety of our users or the public.
+                        </li>
+                    </ul>
+                    <h2><i>4. DATA SECURITY</i></h2>
+                    <p>We implement appropriate security measures to protect against unauthorized access, alteration,
+                        disclosure, or destruction of your personal information. However, no method of transmission over
+                        the Internet or method of electronic storage is entirely secure, and we cannot guarantee
+                        absolute security.</p>
+                    <h2><i>5. COOKIES AND TRACKING TECHNOLOGIES</i></h2>
+                    <p>Our website uses cookies and similar tracking technologies to enhance your browsing experience,
+                        analyze site traffic, and understand where our visitors are coming from. You can control cookies
+                        through your browser settings, but note that disabling cookies may affect the functionality of
+                        our services.</p>
+                    <h2><i>6. CHILDREN’S PRIVACY</i></h2>
+                    <p>Our services are not directed to individuals under 13, and we do not knowingly collect personal
+                        information from children under 13. If we become aware that we have collected personal
+                        information from a child under age 13 without verification of parental consent, we will take
+                        steps to delete that information from our servers.</p>
+                    <h2><i>7. INTERNATIONAL USERS</i></h2>
+                    <p>If you are accessing our services from outside Nigeria, please note that your information may be
+                        transferred to, stored, and processed in Nigeria, where our servers and central database are
+                        located. By using our services, you consent to this transfer of information.</p>
+                        <h2><i>8. CHANGES TO THIS PRIVACY POLICY</i></h2>
+                        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
                 </div>
             </div>
-
         </div>
     </section>
-    <!-- contact-page End -->
+
+  
 
     <!-- Casino Contact start -->
     <section id="contact-us" class="contact-us back-dark contact section">
@@ -325,6 +401,7 @@
 
     </section>
     <!-- Casino Contact End -->
+
     <!-- jQuery -->
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
@@ -344,42 +421,35 @@
     <!-- custom -->
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/menu.js"></script>
-    <script>
-        // You can use JavaScript to dynamically fill in the order details
-        // document.getElementById('order-id').innerText = "123456";
-        // document.getElementById('product-name').innerText = "Game Name";
-        // document.getElementById('product-price').innerText = "$50.00";
-        const responseData = localStorage.getItem('responseData');
-        setTimeout(function(){
-
-            if (responseData) {
-            // Parse the JSON string back to an object
-            const responseObject = JSON.parse(responseData);
-        
-            // redirect logic 
-            const gamaName=responseObject.purchase.products[0].name;
-            if(gamaName=="bingoSlot"){
-                window.location.href = "https://playsmartgaming.com/games/bingo-75-260624/";
-            }
-            else if(gamaName=="shieldSlot"){
-                window.location.href = "https://playsmartgaming.com/games/shield_slot250624/";
-            }
-            else if(gamaName=="fruitSlot"){
-                window.location.href = "https://playsmartgaming.com/games/the-fruits-slot-26062403/";
-            }
-            else if(gamaName=="horseRaceSlot"){
-                window.location.href = "https://playsmartgaming.com/games/horse-racing-26062402/";
-            }
-            console.log('Retrieved response data:', responseObject.purchase.products[0].name);
-    
-            
-            // Remove the item from session storage
-            localStorage.removeItem('responseData');
-        }else{
-            // window.location.href = "https://games.playsmartgaming.com/failure-data.html";
-        }
-        }, 2000
-    )
+	<script>
+ // js for login and signup ========================= //
+    var userName = '<%= (session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getFirstName() : "" %>';
+  if (userName !== '') {
+      console.log("User is logged in: " + userName);
+      $(".userNav-res").show();
+      $(".login_menu").hide();
+      $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
+      $(".userInfo .dropdown-toggle").text(userName);
+      $(".login").hide();
+      $(".userInfo").show();
+      $(".casino-btn a").attr("href", "user-detail.jsp");
+      $(".cardBox a").attr("href", "user-detail.jsp");
+      $(".casGnbn a").attr("href", "user-detail.jsp");
+  }else{
+      console.log("User is not logged in");
+      $(".userNav-res").hide();
+      $(".login_menu").show();
+      $(".login").show();
+      $(".userInfo").hide();
+      $(".casino-btn a").attr("href", "login.jsp");
+      $(".cardBox a").attr("href", "login.jsp");
+      $(".casGnbn a").attr("href", "login.jsp");
+  }
+  
+  function logout() {
+      // Assuming you want to submit the form to the "/otp" endpoint
+      document.forms["logoutForm"].submit();
+  }
     </script>
 </body>
 

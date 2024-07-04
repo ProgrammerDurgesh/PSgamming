@@ -1,10 +1,11 @@
 <!doctype html>
+<%@page import="common.User"%>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Online Gaming</title>
+    <title>Online Gaming- About Us</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!---Font Icon-->
@@ -29,28 +30,6 @@
     <!-- Theme Style -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
-    <style>
-        .payMentSuccessBox {
-            background-color: #1f0448;
-            max-width: 450px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .payMentSuccessBox .card-body h3 {
-            color: #fff;
-            font-family: 'Anton', sans-serif;
-            font-size: 24px;
-            line-height: 34px;
-            margin-bottom: 15px;
-        }
-
-        .payMentSuccessBox .card-body .order-details p {
-            font-family: "Nunito";
-            margin-bottom: 8px;
-            padding-bottom: 0;
-        }
-    </style>
 
 </head>
 
@@ -62,7 +41,6 @@
     <!-- back to top end -->
 
     <!-- Preloader Start -->
-
     <div class="preloader">
         <div class="loader">
             <span></span>
@@ -82,11 +60,10 @@
             <span></span>
         </div>
     </div>
-
     <!-- Preloader end -->
 
     <!-- Header -->
- <section id="header" class="header_area">
+     <section id="header" class="header_area">
 
         <!-- NAV AREA CSS -->
         <nav id="nav-part"
@@ -194,34 +171,241 @@
     </section>
     <!-- Header End -->
 
-    <!-- contact-page Start -->
-    <section id="contact-page" class="contact-page section">
+    <section class="about-page back-light">
         <div class="container">
-
             <div class="row">
-                <div class="col-md-9 mx-auto">
-                    <div class="heading text-center">
-                        <h2>Payment Successful</h2>
+                <div class="col-lg-6">
+                    <div class="about-video">
+                        <img src="assets/images/mask_img02.webp" class="img-fluid w-100" alt="img">
+                        <!-- <div class="youtube_video">
+							<a class="bla-1 play-video-button" href="https://www.youtube.com/watch?v=yRyC7WJ3YIk">
+								<i class="fa fa-play"></i>
+
+							</a>
+						</div> -->
+                    </div>
+                </div>
+                <div class="col-lg-6 contact-about">
+                    <div class="heading">
+                        <h2>WELCOME TO PLAYSMART GAMING</h2>
                         <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
                     </div>
-                    <div class="card payMentSuccessBox ">
-                        <div class="card-body">
-                            <!-- <h1 class="success-message">Payment Successful!</h1> -->
-                            <h3>Thank you for your purchase.</h3>
-                            <!-- <div class="order-details">
-                                <p>Order ID: <span id="order-id"></span></p>
-                                <p>Product: <span id="product-name"></span></p>
-                                <p>Price: <span id="product-price"></span></p>
-                            </div> -->
-                        </div>
-                    </div>
+                    <p class="mb30">Welcome to PlaySmart Gaming, proudly brought to you by CP Technology and Integrated
+                        Systems Limited!
+                    </p><br>
+                    <p>Our mission is to revolutionize the world of gaming by developing intelligent strategies,
+                        fostering player engagement, and crafting games that are not only enjoyable but also
+                        irresistibly adorable. We believe that games have the power to bring people together, challenge
+                        minds, and create unforgettable experiences. That’s why we push the boundaries of traditional
+                        gaming to offer something truly special for our gamers.</p>
 
+                    <div class="casino-btn">
+                        <a href="#">Play now</a>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+    <!-- FAQ Start -->
+    <section id="faq" class="faq back-dark section nestedLagos">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-6">
+                    <div class="heading">
+                        <h6>ABOUT PLAY SMART GAMING</h6>
+                        <h2>NESTLED IN LAGOS</h2>
+                        <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
+                    </div>
+                </div>
+            </div>
+            <div class="row rowLag">
+                <div class="col-lg-5">
+                    <div class="leftImg">
+                        <img src="assets/images/services_details02.jpg" alt="PSgaming" />
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="rgtData">
+                        <h2>Gaming Strategy</h2>
+                        <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
+                        <p>
+                            At PlaySmart Gaming, we are masters of strategy. Our team of expert developers and designers
+                            meticulously craft each game, ensuring that every element is balanced, engaging, and
+                            challenging. We delve deep into the gaming psyche, understanding what makes players tick,
+                            what keeps them returning, and how we can provide an enriching gaming experience that stands
+                            the test of time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- row end  -->
+            <div class="row rowLag klk">
+
+                <div class="col-md-7">
+                    <div class="rgtData">
+                        <h2>Player Engagement</h2>
+                        <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
+                        <p>
+                            Player engagement is at the core of what we do. We create immersive experiences that
+                            captivate our audiences, ensuring that every interaction is meaningful and enjoyable. Our
+                            games are designed to foster community and create lasting bonds between players. Whether
+                            you're a casual gamer or a competitive player, we aim to provide an environment where you
+                            can thrive and truly enjoy the gaming experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="leftImg">
+                        <img src="assets/images/services_details002.jpeg" alt="PSgaming" />
+                    </div>
+                </div>
+            </div>
+            <!-- row end  -->
+            <div class="row rowLag">
+                <div class="col-lg-5">
+                    <div class="leftImg">
+                        <img src="assets/images/services_details01.jpg" alt="PSgaming" />
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="rgtData">
+                        <h2>Adorable Games</h2>
+                        <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
+                        <p>
+                            We believe that games should not only be fun but also delightfully cute and engaging. Our
+                            design team puts extra effort into creating charming characters, captivating worlds, and
+                            intricate storylines that players fall in love with. From the casual gamer to the hardcore
+                            enthusiast, our adorable games offer something for everyone, making them a joy to play time
+                            after time.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FAQ End -->
+
+    <!-- Related other games Start -->
+
+    <section id="project-img" class="project-img back-light section">
+        <div class="container">
+
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-6">
+                    <div class="heading">
+                        <h2>Why Choose PlaySmart Gaming?</h2>
+                        <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
+                    </div>
+                </div>
+            </div>
+            <ul class="nav nav-pills whyChooseSec" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-why1-tab" data-toggle="pill" data-target="#pills-why1" type="button" role="tab" aria-controls="pills-why1" aria-selected="true">
+                        <img src="assets/images/logo1.png" alt="PSgaming" />
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-why2-tab" data-toggle="pill" data-target="#pills-why2" type="button" role="tab" aria-controls="pills-why2" aria-selected="false">
+                    <img src="assets/images/logo2.png" alt="PSgaming" />
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-why3-tab" data-toggle="pill" data-target="#pills-why3" type="button" role="tab" aria-controls="pills-why3" aria-selected="false">
+                    <img src="assets/images/logo3.png" alt="PSgaming" />
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-why4-tab" data-toggle="pill" data-target="#pills-why4" type="button" role="tab" aria-controls="pills-why4" aria-selected="false">
+                        <img src="assets/images/logo4.png" alt="PSgaming" />
+                    </button>
+                  </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-why1" role="tabpanel" aria-labelledby="pills-why1-tab">
+                    <div class="row">
+                        <div class="col-md-8 mx-auto">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="chsGameLt">
+                                        <img src="assets/images/breadcrumb_img01.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="chsGameRt">
+                                        <h3>EXPERTISE</h3>
+                                        <p>With years of experience in the gaming industry, our team knows what it takes to create captivating and entertaining games.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-why2" role="tabpanel" aria-labelledby="pills-why2-tab">
+                    <div class="row">
+                        <div class="col-md-8 mx-auto">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="chsGameLt">
+                                        <img src="assets/images/breadcrumb_img02.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="chsGameRt">
+                                        <h3>INNOVATION</h3>
+                                        <p>We are constantly pushing the boundaries of what’s possible, incorporating the latest technologies and trends to stay ahead of the curve.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-why3" role="tabpanel" aria-labelledby="pills-why3-tab">
+                    <div class="row">
+                        <div class="col-md-8 mx-auto">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="chsGameLt">
+                                        <img src="assets/images/breadcrumb_img03.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="chsGameRt">
+                                        <h3>COMMUNITY</h3>
+                                        <p>Our games are built around fostering a strong player community. We believe in the power of gaming to bring people together.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-why4" role="tabpanel" aria-labelledby="pills-why4-tab">
+                    <div class="row">
+                        <div class="col-md-8 mx-auto">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="chsGameLt">
+                                        <img src="assets/images/breadcrumb_img01.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="chsGameRt">
+                                        <h3>QUALITY</h3>
+                                        <p>We prioritize quality in every aspect of our games—from design and development to player support. Each game is crafted with meticulous attention to detail to ensure a seamless and enjoyable gaming experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
 
         </div>
     </section>
-    <!-- contact-page End -->
+    <!-- Related other game End -->
 
     <!-- Casino Contact start -->
     <section id="contact-us" class="contact-us back-dark contact section">
@@ -325,6 +509,7 @@
 
     </section>
     <!-- Casino Contact End -->
+
     <!-- jQuery -->
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
@@ -344,42 +529,35 @@
     <!-- custom -->
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/menu.js"></script>
-    <script>
-        // You can use JavaScript to dynamically fill in the order details
-        // document.getElementById('order-id').innerText = "123456";
-        // document.getElementById('product-name').innerText = "Game Name";
-        // document.getElementById('product-price').innerText = "$50.00";
-        const responseData = localStorage.getItem('responseData');
-        setTimeout(function(){
-
-            if (responseData) {
-            // Parse the JSON string back to an object
-            const responseObject = JSON.parse(responseData);
-        
-            // redirect logic 
-            const gamaName=responseObject.purchase.products[0].name;
-            if(gamaName=="bingoSlot"){
-                window.location.href = "https://playsmartgaming.com/games/bingo-75-260624/";
-            }
-            else if(gamaName=="shieldSlot"){
-                window.location.href = "https://playsmartgaming.com/games/shield_slot250624/";
-            }
-            else if(gamaName=="fruitSlot"){
-                window.location.href = "https://playsmartgaming.com/games/the-fruits-slot-26062403/";
-            }
-            else if(gamaName=="horseRaceSlot"){
-                window.location.href = "https://playsmartgaming.com/games/horse-racing-26062402/";
-            }
-            console.log('Retrieved response data:', responseObject.purchase.products[0].name);
-    
-            
-            // Remove the item from session storage
-            localStorage.removeItem('responseData');
-        }else{
-            // window.location.href = "https://games.playsmartgaming.com/failure-data.html";
-        }
-        }, 2000
-    )
+	<script>
+ // js for login and signup ========================= //
+    var userName = '<%= (session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getFirstName() : "" %>';
+  if (userName !== '') {
+      console.log("User is logged in: " + userName);
+      $(".userNav-res").show();
+      $(".login_menu").hide();
+      $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
+      $(".userInfo .dropdown-toggle").text(userName);
+      $(".login").hide();
+      $(".userInfo").show();
+      $(".casino-btn a").attr("href", "user-detail.jsp");
+      $(".cardBox a").attr("href", "user-detail.jsp");
+      $(".casGnbn a").attr("href", "user-detail.jsp");
+  }else{
+      console.log("User is not logged in");
+      $(".userNav-res").hide();
+      $(".login_menu").show();
+      $(".login").show();
+      $(".userInfo").hide();
+      $(".casino-btn a").attr("href", "login.jsp");
+      $(".cardBox a").attr("href", "login.jsp");
+      $(".casGnbn a").attr("href", "login.jsp");
+  }
+  
+  function logout() {
+      // Assuming you want to submit the form to the "/otp" endpoint
+      document.forms["logoutForm"].submit();
+  }
     </script>
 </body>
 

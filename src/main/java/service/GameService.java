@@ -4,8 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import common.DatabaseConfiguration;
+import common.GameEntity;
 
 public class GameService {
 	private DatabaseConfiguration configuration = new DatabaseConfiguration();
@@ -70,5 +73,43 @@ public class GameService {
 			}
 		}
 	}
+	
+	
+	public List<GameEntity> getAllGames() {
+		System.out.println("123456666666666654321234567899876543234567890987654");
+	    List<GameEntity> games = new ArrayList<GameEntity>();
+	    ResultSet resultSet = null;
+	    try {
+	        connection = configuration.getConnection();
+	        String query = "SELECT * FROM games";
+	        preparedStatement = connection.prepareStatement(query);
+	        resultSet = preparedStatement.executeQuery();
+	        while (resultSet.next()) {
+	            int gameId = resultSet.getInt("id");
+	            String name = resultSet.getString("name");
+	            double price = resultSet.getDouble("price");
+	            int game_id = resultSet.getInt("game_id");
+	            games.add(new GameEntity(gameId, name, price, game_id));
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    } finally {
+	        try {
+	            if (resultSet != null) {
+	                resultSet.close();
+	            }
+	            if (preparedStatement != null) {
+	                preparedStatement.close();
+	            }
+	            if (connection != null) {
+	                connection.close();
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	    return games;
+	}
+
 
 }
