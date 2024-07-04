@@ -2251,13 +2251,13 @@ nav.navbar .container {
 }
 
 .about-video:before {
-    content: '';
+    /* content: '';
     position: absolute;
     z-index: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    top: 0px;
+    top: 0px; */
 }
 
 .about-video img {
@@ -2519,6 +2519,12 @@ nav.navbar .container {
     font-weight: 600;
     display: flex;
 }
+.contactHdg p{
+    line-height: 26px;
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+}
 
 .location-icon i {
     width: 40px;
@@ -2535,13 +2541,13 @@ nav.navbar .container {
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     color: #fff;
 
 }
 
 .location-txt {
-    padding-right: 130px;
+    /* padding-right: 130px; */
 }
 
 .location-txt span {
@@ -2785,4 +2791,90 @@ nav.navbar .container {
         -webkit-transform: translate(-130%, 0);
         transform: translate(-130%, 0);
     }
+}
+
+/* news css start  */
+.nestedLagos .heading h6{
+    color:#fff;
+    margin-bottom:10px;
+    font-size:12px;
+    margin-bottom:30px;
+}
+.nestedLagos  .rowLag{
+    margin-bottom:40px;
+}
+.nestedLagos .leftImg img{
+    width:100%;
+}
+.nestedLagos  .rowLag .rgtData{
+    margin-top:30px;
+}
+.nestedLagos  .rowLag .rgtData h2{
+    color: #fcb11a;
+    font-size: 28px;
+    line-height:32px;
+    font-family: 'Anton', sans-serif;
+    margin-bottom:20px;
+}
+.nestedLagos  .rowLag .rgtData img{
+    margin-bottom:20px;
+}
+.nestedLagos  .rowLag .rgtData p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+}
+.whyChooseSec{
+    justify-content:space-around;
+}
+.whyChooseSec li .nav-link{
+    background-color:transparent;
+    border:3px solid transparent;
+}
+.whyChooseSec li .nav-link:focus{
+    outline:none;
+}
+.whyChooseSec li .nav-link.active{
+    background-color:#f7ab00;
+    border:3px solid #f7ab00;
+    background: -webkit-linear-gradient(#ffd370 0%, #f7ad07 50%);
+
+}
+.whyChooseSec li .nav-link img{
+    cursor: pointer;
+    width:75px;
+}
+.chsGameLt img{
+    width:220px;
+}
+.chsGameRt h3{
+    color:#ffcd04;
+    margin-bottom:20px;
+
+}
+.refundPolicy-sec h2{
+    color:#f7c454;
+    margin-bottom:15px;
+}
+.refundPolicy-sec p{
+    margin-bottom:16px;
+    color:#f3f3f3;
+}
+.refundPolicy-sec p a{
+    color:#ffd370;
+}
+.refundPolicy-sec ul , .refundPolicy-sec ol{
+    margin-bottom:15px;
+    padding-left:20px;
+}
+.refundPolicy-sec ul li , .refundPolicy-sec ol li{
+    color: #f3f3f3;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    list-style:disc;
+}
+.refundPolicy-sec ol li a{
+    color:#ffd370;
 }

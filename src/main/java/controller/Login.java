@@ -1,12 +1,15 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
 
+import common.GameEntity;
 import common.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import service.GameService;
 import service.UserService;
 
 public class Login extends HttpServlet {
@@ -27,6 +30,9 @@ public class Login extends HttpServlet {
             String password2 = user.getPassword();
             // Check if user exists and password is correct
             if (password.equalsIgnoreCase(password2)) {
+            	GameService gameService = new GameService();
+        	    List<GameEntity> allGames = gameService.getAllGames();
+        	    request.getSession().setAttribute("allGames", allGames);
                 request.getSession().setAttribute("user", user);
                 response.sendRedirect(request.getContextPath() + "/index.jsp");
             } else {

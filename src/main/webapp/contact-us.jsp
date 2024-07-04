@@ -1,10 +1,11 @@
 <!doctype html>
+<%@page import="common.User"%>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Online Gaming</title>
+    <title>Online Gaming- About Us</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!---Font Icon-->
@@ -29,28 +30,6 @@
     <!-- Theme Style -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
-    <style>
-        .payMentSuccessBox {
-            background-color: #1f0448;
-            max-width: 450px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .payMentSuccessBox .card-body h3 {
-            color: #fff;
-            font-family: 'Anton', sans-serif;
-            font-size: 24px;
-            line-height: 34px;
-            margin-bottom: 15px;
-        }
-
-        .payMentSuccessBox .card-body .order-details p {
-            font-family: "Nunito";
-            margin-bottom: 8px;
-            padding-bottom: 0;
-        }
-    </style>
 
 </head>
 
@@ -62,7 +41,6 @@
     <!-- back to top end -->
 
     <!-- Preloader Start -->
-
     <div class="preloader">
         <div class="loader">
             <span></span>
@@ -82,11 +60,10 @@
             <span></span>
         </div>
     </div>
-
     <!-- Preloader end -->
 
     <!-- Header -->
- <section id="header" class="header_area">
+     <section id="header" class="header_area">
 
         <!-- NAV AREA CSS -->
         <nav id="nav-part"
@@ -194,34 +171,91 @@
     </section>
     <!-- Header End -->
 
-    <!-- contact-page Start -->
+<!-- contact-page Start -->
     <section id="contact-page" class="contact-page section">
         <div class="container">
-
             <div class="row">
-                <div class="col-md-9 mx-auto">
-                    <div class="heading text-center">
-                        <h2>Payment Successful</h2>
+                <div class="col-md-6">
+                    <div class="heading contactHdg">
+                        <h2>Contact us</h2>
+                        <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
+                        <p>Thank you for visiting PlaySmart Gaming, and we look forward to welcoming you to our world of playful innovation!</p>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-2 col-md-3 col-3">
+                            <div class="location-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-9">
+                            <div class="location-txt">
+                                <span>15, ADEWALE, ADEGBETE, UNIQUE ESTATE,
+                                    BARUWA, LAGOS STATE, NIGERIA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-2 col-md-3 col-3">
+                            <div class="location-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-9">
+                            <div class="location-txt">
+                                <span>+971 333 222 557</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-2 col-md-3 col-3">
+                            <div class="location-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-9">
+                            <div class="location-txt">
+                                <span>info@playsmartgaming.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="heading">
+                        <h2>Get in touch</h2>
                         <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
                     </div>
-                    <div class="card payMentSuccessBox ">
-                        <div class="card-body">
-                            <!-- <h1 class="success-message">Payment Successful!</h1> -->
-                            <h3>Thank you for your purchase.</h3>
-                            <!-- <div class="order-details">
-                                <p>Order ID: <span id="order-id"></span></p>
-                                <p>Product: <span id="product-name"></span></p>
-                                <p>Price: <span id="product-price"></span></p>
-                            </div> -->
-                        </div>
+                    <div class="faq-form">
+
+                        <form>
+
+                            <div class="form-group col-sm-12">
+                                <input type="text" class="form-control" name="name" placeholder="Enter Your Name">
+                            </div>
+                            <div class="form-group col-sm-12">
+                                <input type="text" class="form-control" name="email" placeholder="Enter Your Email">
+                            </div>
+                            <div class="form-group col-sm-12">
+
+                                <textarea name="meassage" placeholder="Enter Comments"></textarea>
+
+                            </div>
+                            <div class="casino-btn col-sm-12">
+                                <a href="#" class="btn-4 yellow-btn faq-btn">send</a></div>
+                        </form>
+
                     </div>
 
                 </div>
             </div>
-
         </div>
     </section>
     <!-- contact-page End -->
+    <div class="googleMap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4774244186806!2d3.248499275713328!3d6.587423222415702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9aa258379995%3A0x57e944e74c1b89df!2sUnique%20Estate!5e0!3m2!1sen!2sin!4v1719987932827!5m2!1sen!2sin" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  
 
     <!-- Casino Contact start -->
     <section id="contact-us" class="contact-us back-dark contact section">
@@ -325,6 +359,7 @@
 
     </section>
     <!-- Casino Contact End -->
+
     <!-- jQuery -->
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
@@ -344,42 +379,35 @@
     <!-- custom -->
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/menu.js"></script>
-    <script>
-        // You can use JavaScript to dynamically fill in the order details
-        // document.getElementById('order-id').innerText = "123456";
-        // document.getElementById('product-name').innerText = "Game Name";
-        // document.getElementById('product-price').innerText = "$50.00";
-        const responseData = localStorage.getItem('responseData');
-        setTimeout(function(){
-
-            if (responseData) {
-            // Parse the JSON string back to an object
-            const responseObject = JSON.parse(responseData);
-        
-            // redirect logic 
-            const gamaName=responseObject.purchase.products[0].name;
-            if(gamaName=="bingoSlot"){
-                window.location.href = "https://playsmartgaming.com/games/bingo-75-260624/";
-            }
-            else if(gamaName=="shieldSlot"){
-                window.location.href = "https://playsmartgaming.com/games/shield_slot250624/";
-            }
-            else if(gamaName=="fruitSlot"){
-                window.location.href = "https://playsmartgaming.com/games/the-fruits-slot-26062403/";
-            }
-            else if(gamaName=="horseRaceSlot"){
-                window.location.href = "https://playsmartgaming.com/games/horse-racing-26062402/";
-            }
-            console.log('Retrieved response data:', responseObject.purchase.products[0].name);
-    
-            
-            // Remove the item from session storage
-            localStorage.removeItem('responseData');
-        }else{
-            // window.location.href = "https://games.playsmartgaming.com/failure-data.html";
-        }
-        }, 2000
-    )
+	<script>
+ // js for login and signup ========================= //
+    var userName = '<%= (session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getFirstName() : "" %>';
+  if (userName !== '') {
+      console.log("User is logged in: " + userName);
+      $(".userNav-res").show();
+      $(".login_menu").hide();
+      $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
+      $(".userInfo .dropdown-toggle").text(userName);
+      $(".login").hide();
+      $(".userInfo").show();
+      $(".casino-btn a").attr("href", "user-detail.jsp");
+      $(".cardBox a").attr("href", "user-detail.jsp");
+      $(".casGnbn a").attr("href", "user-detail.jsp");
+  }else{
+      console.log("User is not logged in");
+      $(".userNav-res").hide();
+      $(".login_menu").show();
+      $(".login").show();
+      $(".userInfo").hide();
+      $(".casino-btn a").attr("href", "login.jsp");
+      $(".cardBox a").attr("href", "login.jsp");
+      $(".casGnbn a").attr("href", "login.jsp");
+  }
+  
+  function logout() {
+      // Assuming you want to submit the form to the "/otp" endpoint
+      document.forms["logoutForm"].submit();
+  }
     </script>
 </body>
 

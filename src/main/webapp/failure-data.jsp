@@ -87,7 +87,7 @@
     <!-- Preloader end -->
 
     <!-- Header -->
-        <section id="header" class="header_area">
+      <section id="header" class="header_area">
 
         <!-- NAV AREA CSS -->
         <nav id="nav-part"
@@ -110,16 +110,13 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <div class="nav-res">
                         <ul class="nav navbar-nav m-auto menu-inner tog-nav">
-                            <li><a href="#banner" class="active">Home</a></li>
-                            <li><a href="https://playsmartgaming.com/about-us/">About us</a></li>
-                            <li><a href="https://playsmartgaming.com/services/">Services</a></li>
-                            <li><a href="https://playsmartgaming.com/contact-us/">Contact us</a></li>
+                            <li><a href="index.jsp" class="active">Home</a></li>
+                            <li><a href="about-us.jsp">About us</a></li>
+                            <li><a href="contact-us.jsp">Contact us</a></li>
                             <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                     aria-haspopup="true" aria-expanded="false">Pages</a>
                                 <ul class="dropdown-menu maindrop_menu">
-                                    <li><a href="https://playsmartgaming.com/refund-policy/">Refund Policy</a></li>
-                                    <li><a href="https://playsmartgaming.com/shipping-policy/">Shipping Policy</a></li>
-                                    <li><a href="https://playsmartgaming.com/terms-and-policy/">Terms and Policy</a></li>
+                                    <li><a href="term-policy.jsp">Terms and Policy</a></li>
                                 </ul>
                             </li>
                             <li class="more-less">
@@ -166,16 +163,13 @@
             <div id="head-mobile"></div>
             <div class="button"><i class="more-less fa fa-align-right"></i></div>
             <ul>
-                <li><a href="#banner" class="active">Home</a></li>
-                <li><a href="https://playsmartgaming.com/about-us/">About us</a></li>
-                            <li><a href="https://playsmartgaming.com/services/">Services</a></li>
-                            <li><a href="https://playsmartgaming.com/contact-us/">Contact us</a></li>
+                <li><a href="index.jsp" class="active">Home</a></li>
+                <li><a href="about-us.jsp">About us</a></li>
+                <li><a href="contact-us.jsp">Contact us</a></li>
                 <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
                         aria-haspopup="true" aria-expanded="false">Pages</a>
                     <ul class="dropdown-menu maindrop_menu">
-                        <li><a href="https://playsmartgaming.com/refund-policy/">Refund Policy</a></li>
-                        <li><a href="https://playsmartgaming.com/shipping-policy/">Shipping Policy</a></li>
-                        <li><a href="https://playsmartgaming.com/terms-and-policy/">Terms and Policy</a></li>
+                        <li><a href="term-policy.jsp">Terms and Policy</a></li>
                     </ul>
                 </li>
 
@@ -318,10 +312,10 @@
                 <div class="col-md-12 bot-menu">
                     <div class="foot-menu">
                         <ul>
-                            <li><a href="https://playsmartgaming.com/about-us/" class="">About Us</a></li>
-                            <li><a href="https://playsmartgaming.com/refund-policy/">Refund Policy</a></li>
-                            <li><a href="https://playsmartgaming.com/shipping-policy/" class="active">Shipping Policy</a></li>
-                            <li><a href="https://playsmartgaming.com/terms-and-policy/">Terms and Policy</a></li>
+                            <li><a href="index.jsp">Home</a></li>
+                            <li><a href="about-us.jsp" class="">About Us</a></li>
+                            <li><a href="contact-us.jsp" class="active">Contact Us</a></li>
+                            <li><a href="term-policy.jsp">Terms and Policy</a></li>
                         </ul>
                     </div>
                 </div>

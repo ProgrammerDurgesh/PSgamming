@@ -44,5 +44,20 @@
 		<servlet-name>SignupServlet</servlet-name>
 		<url-pattern>/signup</url-pattern>
 	</servlet-mapping>
-
+	<servlet>
+		<servlet-name>UserInfo</servlet-name>
+		<servlet-class>controller.UserInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserInfo</servlet-name>
+		<url-pattern>/userInfo</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Game</servlet-name>
+		<servlet-class>controller.Game</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Game</servlet-name>
+		<url-pattern>/game</url-pattern>
+	</servlet-mapping>
 </web-app>
