@@ -311,7 +311,7 @@
                                         <div class="port-text-btm">
                                             <input type="hidden" name="shieldSlot" />
                                             <h3>Shield slot</h3>
-                                            <p><span>NGN 50/1hr</span></p>
+                                            <p><span>NGN 30000/1hr</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -331,7 +331,7 @@
                                         <div class="port-text-btm">
                                             <input type="hidden" name="bingoSlot" id="bingoSlot" value="bingoSlot" />
                                             <h3>Bingo slot</h3>
-                                            <p><span>NGN 50/1hr</span></p>
+                                            <p><span>NGN 30000/1hr</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -350,7 +350,7 @@
                                         </div>
                                         <div class="port-text-btm">
                                             <h3>Fruit slot</h3>
-                                            <p><span>NGN 50/1hr</span></p>
+                                            <p><span>NGN 30000/1hr</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -369,7 +369,7 @@
                                         </div>
                                         <div class="port-text-btm">
                                             <h3>Horse race slot</h3>
-                                            <p><span>NGN 50/1hr</span></p>
+                                            <p><span>NGN 30000/1hr</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -388,7 +388,7 @@
                                         </div>
                                         <div class="port-text-btm">
                                             <h3>Amazing slot</h3>
-                                            <p><span>$50/1hr</span></p>
+                                            <p><span>$30000/1hr</span></p>
                                         </div>
                                     </div>
                                 </div>
