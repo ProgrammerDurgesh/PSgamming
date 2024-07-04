@@ -222,6 +222,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 										<option value="Horse Race Slot">Horse Race Slot</option>
 										<!-- <option value="amazingSlot">Amazing Slot</option> -->
 									</select>
+									 <label class="frmValidmsg" for="">Please select game</label>
 									<!-- <input type="text" class="form-control" id="gameName" name="gameName" placeholder="Enter game"> -->
 								</div>
 								<div class="form-group col-md-6">
@@ -249,15 +250,18 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 									<label>Street address</label> <input type="text"
 										class="form-control" name="streetAddress"
 										placeholder="Enter address">
+										<label class="frmValidmsg" for="">Please enter street address</label>
 								</div>
 								<div class="form-group col-md-6">
 									<label>City</label> <input type="text" class="form-control" id="userCity"
 										name="city" placeholder="Enter city">
+										<label class="frmValidmsg" for="">Please enter city</label>
 								</div>
 								<div class="form-group col-md-6">
 									<label>State code</label> <input type="text"
 										class="form-control" name="stateCode"
 										placeholder="Enter state code">
+										<label class="frmValidmsg" for="">Please enter state code</label>
 								</div>
 								<div class="form-group col-md-6">
 									<label>Country</label> <input type="text" class="form-control"
@@ -279,6 +283,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 								<div class="form-group col-md-6">
 									<label>Zip code</label> <input type="text" class="form-control"
 										name="zipcode" placeholder="Enter zip code">
+										<label class="frmValidmsg" for="">Please enter zip code</label>
 								</div>
 							</div>
 							<div class="row">
@@ -492,9 +497,63 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
       document.forms["logoutForm"].submit();
   }
   $(document).ready(function () {
+	//Function to validate each input field
+	  function validateForm() {
+	       var isValid = true;
+	       // Clear previous validation messages
+	       $(".frmValidmsg").hide();
+	       // game name validation
+	       var gameName = $("select[name='gameName']").val().trim();
+	       console.log("gameName :" , gameName);
+	       if (gameName === "" || gameName ==="Select game") {
+	           isValid = false;
+	           $("select[name='gameName']").next(".frmValidmsg").show();
+	       }
+	       
+	       // address validation
+           var streetAddress = $("input[name='streetAddress']").val().trim();
+           if (streetAddress === "") {
+               isValid = false;
+               $("input[name='streetAddress']").next(".frmValidmsg").show();
+           }
+           
+           // stateCode validation
+           var stateCode = $("input[name='stateCode']").val().trim();
+           if (stateCode === "") {
+               isValid = false;
+               $("input[name='stateCode']").next(".frmValidmsg").show();
+           }
+           
+           // stateCode validation
+           var stateCode = $("input[name='stateCode']").val().trim();
+           if (stateCode === "") {
+               isValid = false;
+               $("input[name='stateCode']").next(".frmValidmsg").show();
+           }
+           // city validation
+           var city = $("input[name='city']").val().trim();
+           if (city === "") {
+               isValid = false;
+               $("input[name='city']").next(".frmValidmsg").show();
+           }           
+           
+           // zipcode validation
+           var stateCode = $("input[name='zipcode']").val().trim();
+           if (stateCode === "") {
+               isValid = false;
+               $("input[name='zipcode']").next(".frmValidmsg").show();
+           }
+
+	       return isValid;
+	   }
+	   // Validate form on input change
+	   $("input").on("input", function() {
+	       validateForm();
+	   });
       $('#purchaseForm').on('submit', function (event) {
           event.preventDefault(); // Prevent the default form submission
-              
+          if (validateForm()) {
+              this.submit(); // Submit the form if valid      
           // Collect form data
           var formData = {
               client: {
@@ -546,6 +605,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
                   // Handle error
               }
           });
+          }
       });
       
       var allGames = "<%=allGames%>";

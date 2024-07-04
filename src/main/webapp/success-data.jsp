@@ -359,16 +359,16 @@
             // redirect logic 
             const gamaName=responseObject.purchase.products[0].name;
             if(gamaName=="bingoSlot"){
-                window.location.href = "https://playsmartgaming.com/games/bingo-75-260624/";
+                window.location.href = "https://playsmartgaming.com/games/bingo-75-260624/index.html";
             }
             else if(gamaName=="shieldSlot"){
-                window.location.href = "https://playsmartgaming.com/games/shield_slot250624/";
+                window.location.href = "https://playsmartgaming.com/games/shield_slot250624/index.html";
             }
             else if(gamaName=="fruitSlot"){
-                window.location.href = "https://playsmartgaming.com/games/the-fruits-slot-26062403/";
+                window.location.href = "https://playsmartgaming.com/games/the-fruits-slot-26062403/index.html";
             }
             else if(gamaName=="horseRaceSlot"){
-                window.location.href = "https://playsmartgaming.com/games/horse-racing-26062402/";
+                window.location.href = "https://playsmartgaming.com/games/horse-racing-26062402/index.html";
             }
             console.log('Retrieved response data:', responseObject.purchase.products[0].name);
     
