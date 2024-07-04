@@ -10,10 +10,10 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 public class EmailConfig {
-	  private static  String username="durgeshyadavgpm16@gmail.com";
-	    private static  String password="rwsyazaeyxevguth";
-	    private static  String host="smtp.gmail.com";
-	    private static  String port="587";
+	  private static  String username="no-reply@playsmartgaming.com";
+	    private static  String password="Shailesh Bhai:";
+	    private static  String host="altar30.supremepanel30.com";
+	    private static  String port="465";
 
 	    public EmailConfig(String username, String password, String host, String port) {
 	        this.username = username;
@@ -25,7 +25,7 @@ public class EmailConfig {
 	    public static void sendEmail(String to, String subject, String body) {
 	        Properties props = new Properties();
 	        props.put("mail.smtp.auth", "true");
-	        props.put("mail.smtp.starttls.enable", "true");
+	        props.put("mail.smtp.ssl.enable", "true");
 	        props.put("mail.smtp.host", host);
 	        props.put("mail.smtp.port", port);
 	        Session session = Session.getInstance(props, new javax.mail.Authenticator() {
