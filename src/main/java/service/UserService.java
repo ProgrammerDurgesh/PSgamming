@@ -62,7 +62,7 @@ public class UserService {
 
     public boolean verifyOTP(String email, Integer otp) {
         String selectSQL = "SELECT otp FROM users WHERE email = ?";
-        String updateSQL = "UPDATE users SET otp = NULL WHERE email = ?";
+        String updateSQL =  "UPDATE users SET otp = NULL, Active = TRUE WHERE email = ?";
 
         try (Connection connection = configuration.getConnection();
              PreparedStatement selectStatement = connection.prepareStatement(selectSQL);

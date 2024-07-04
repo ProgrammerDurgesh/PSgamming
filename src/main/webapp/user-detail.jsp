@@ -38,12 +38,12 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
 <style>
-	#currency:disabled{
-	background-color:transparent;
-	    appearance: none;
-	     -webkit-appearance: none;
-   -moz-appearance:    none;
-	}
+#currency:disabled {
+	background-color: transparent;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
 </style>
 </head>
 
@@ -213,8 +213,8 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 							method="post">
 							<div class="row">
 								<div class="form-group col-md-6">
-									<label>Game</label> 
-									<select name="gameName" class="form-control" id="gameName">
+									<label>Game</label> <select name="gameName"
+										class="form-control" id="gameName">
 										<option>Select game</option>
 										<option value="Bingo Slot">Bingo slot</option>
 										<option value="Shield Slot">Shield Slot</option>
@@ -225,23 +225,25 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 									<!-- <input type="text" class="form-control" id="gameName" name="gameName" placeholder="Enter game"> -->
 								</div>
 								<div class="form-group col-md-6">
-									<label>Price</label> <input type="text" class="form-control" readonly
-										id="gamePrice" name="price" placeholder="Enter price">
+									<label>Price</label> <input type="text" class="form-control"
+										readonly id="gamePrice" name="price" placeholder="Price">
 								</div>
 								<div class="form-group col-md-6">
-									<label>Email</label> <input type="text" class="form-control"
+									<label>Email</label> <input type="text" id="userEmail" class="form-control"
 										name="email" placeholder="Enter Your Email">
 								</div>
 								<div class="form-group col-md-6">
-									<label>Phone</label> <input type="text" class="form-control"
+									<label>Phone</label> <input type="text" class="form-control" id="userPhone"
 										name="phoneNumber" placeholder="Enter phone">
 								</div>
 								<div class="form-group col-md-6">
-									<label>Currency</label> 
-									<select name="currency" disabled
+									<label>Currency</label> <input type="text" class="form-control"
+										id="userCurrency" name="currency" readonly
+										placeholder="Currency">
+									<!-- <select name="currency" disabled
 										class="form-control" id="currency">
 										<option value="NGN" selected>NGN</option>
-									</select>
+									</select> -->
 								</div>
 								<div class="form-group col-md-6">
 									<label>Street address</label> <input type="text"
@@ -249,7 +251,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 										placeholder="Enter address">
 								</div>
 								<div class="form-group col-md-6">
-									<label>City</label> <input type="text" class="form-control"
+									<label>City</label> <input type="text" class="form-control" id="userCity"
 										name="city" placeholder="Enter city">
 								</div>
 								<div class="form-group col-md-6">
@@ -258,8 +260,10 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 										placeholder="Enter state code">
 								</div>
 								<div class="form-group col-md-6">
-									<label>Country</label>
-									 <select name="country" class="form-control" id="country">
+									<label>Country</label> <input type="text" class="form-control"
+										id="userCountry" name="country" placeholder="Enter country"
+										readonly />
+									<!-- <select name="country" class="form-control" id="country">
      <option>Select Country</option>
     <option value="IN">India</option>
     <option value="NG">Nigeria</option>
@@ -269,7 +273,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
     <option value="FR">France</option>
     <option value="IT">Italy</option>
     <option value="ES">Spain</option>
-</select>
+</select> -->
 
 								</div>
 								<div class="form-group col-md-6">
@@ -279,7 +283,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 							</div>
 							<div class="row">
 								<div class="casino-btn col-sm-12">
-									<button type="submit" onClick="userData();"
+									<button type="submit" 
 										class=" btn-4 yellow-btn faq-btn">Submit</button>
 								</div>
 							</div>
@@ -441,8 +445,25 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 	<script>
  // js for login and signup ========================= //
     var userName = '<%=(session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getFirstName() : ""%>';
+    var userEmail = '<%=(session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getEmail() : ""%>';
+    var userPhone = '<%=(session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getMobileNumber() : ""%>';
+    var userCity = '<%=(session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getCity() : ""%>';
+ var gamePrice =   ' <%String gamePrice = (session.getAttribute("gamePrice") != null) ? (String) session.getAttribute("gamePrice") : "";%>' 
+<%-- <%
+    String gamePriceok = (String) session.getAttribute("gamePrice");
+    if (gamePriceok == null) {
+    	gamePriceok = "N/A";  // Default value if gamePrice is not found in session
+    }
+%> --%>
+<%-- <p>Game Price: <%= gamePrice %></p> --%>
+
+    var  gameCurrency = $("#userCurrency").val();
+    var gamePrice="";
   if (userName !== '') {
       console.log("User is logged in: " + userName);
+      $("#userCity").val(userCity);
+      $("#userPhone").val(userPhone);
+      $("#userEmail").val(userEmail);
       $(".userNav-res").show();
       $(".login_menu").hide();
       $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
@@ -454,6 +475,9 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
       $(".casGnbn a").attr("href", "user-detail.jsp");
   }else{
       console.log("User is not logged in");
+      $("#userCity").val("");
+      $("#userPhone").val("");
+      $("#userEmail").val("");
       $(".userNav-res").hide();
       $(".login_menu").show();
       $(".login").show();
@@ -475,7 +499,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
           var formData = {
               client: {
                   email: $('input[name="email"]').val(),
-                  country: $('select[name="country"]').val(),
+                  country: $('input[name="country"]').val(),
                   city: $('input[name="city"]').val(),
                   stateCode: $('input[name="stateCode"]').val(),
                   street_address: $('input[name="streetAddress"]').val(),
@@ -483,7 +507,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
                   phone: $('input[name="phoneNumber"]').val()
               },
               purchase: {
-                  currency: $('select[name="currency"]').val(),
+                  currency: $('input[name="currency"]').val(),
                   products: [
                       {
                           name: $('select[name="gameName"]').val(),
@@ -547,17 +571,93 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 							document.getElementById('gameName').onchange = function() {
 
 							    var selectedGame = this.value; // Get selected game option value
-							    var gamePrice = gamesObject[selectedGame]; // Get price from gamesObject
-							    
-							    
-							    if (gamePrice !== undefined) {
+							    //console.log("selectedGame :" , selectedGame);
+							     gamePrice = gamesObject[selectedGame]; // Get price from gamesObject
+							     gameCurrency = $("#userCurrency").val();
+							    //console.log("game details :" , gamePrice ,  gameCurrency)
+							    // Retrieve the base URL from the server-side JSP context
+    var baseUrl = '<%=request.getContextPath()%>';
+    
+
+    $.ajax({
+        url: baseUrl + "/getcurrency?currency=" + gameCurrency + "&amount=" + gamePrice,
+        method: 'POST',
+        success: function (response) {
+            //alert("Success: " + response.data);
+            var formattedResponse = parseFloat(response).toFixed(2);  // Converts to float and fixes to 2 decimal places
+            $("#gamePrice").val(formattedResponse)
+            console.log("response" , formattedResponse)
+        },
+        error: function (error) {
+            console.log('Error:', error);
+            // Handle error
+        }
+    });
+							    /* if (gamePrice !== undefined) {
 							        document.getElementById('gamePrice').value = gamePrice.toFixed(2); // Update input field with game price
 							    } else {
 							        document.getElementById('gamePrice').value = ''; // Reset input field if no price found
-							    }
+							    } */
 							};
 						});
   
+  
+  document.addEventListener("DOMContentLoaded", function() {
+	    fetch('country-by-currency-code.json')
+	        .then(response => response.json())
+	        .then(countryCurrencyMap => {
+	        	//console.log('CountryCurrencyMap:', countryCurrencyMap);
+	            if (navigator.geolocation) {
+	                navigator.geolocation.getCurrentPosition(function(position) {
+	                    var lat = position.coords.latitude;
+	                    var lon = position.coords.longitude;
+	                    // Fetch the country information using the coordinates
+	                    fetch(`https://geolocation-db.com/json/`)
+	                        .then(response => response.json())
+	                        .then(data => {
+	                            var country = data.country_name;
+	                           // country = 'Afghanistan';
+	                            document.getElementById("userCountry").value = getCountryCode(country,countryCurrencyMap);
+	                         // Find the currency code for the detected country
+	                            var currencyCode = findCurrencyCode(country,countryCurrencyMap);
+	                            console.log("currencyCode : " , currencyCode)
+	                            
+	                            if (currencyCode) {
+	                                document.getElementById("userCurrency").value = currencyCode;
+	                            } else {
+	                                console.error('Currency not found for country:', country);
+	                            }
+	                        })
+	                        .catch(error => console.error('Error fetching the country information:', error));
+	                }, function(error) {
+	                    console.error('Error getting the location:', error);
+	                });
+	            } else {
+	                console.error("Geolocation API not supported by this browser.");
+	            }
+	        })
+	        .catch(error => console.error('Error loading country-by-currency-code.json:', error));
+	});
+
+//Function to find the currency code from the JSON data
+function findCurrencyCode(country,countryCurrencyMap) {
+    for (var i = 0; i < countryCurrencyMap.length; i++) {
+        if (countryCurrencyMap[i].country === country) {
+            return countryCurrencyMap[i].currency_code;
+        }
+    }
+    return null; // Return null if country not found (handle error in your application)
+}
+
+function getCountryCode(countryName, countriesList) {
+    for (let countryObj of countriesList) {
+        if (countryObj.country === countryName) {
+            return countryObj.country_code;
+        }
+    }
+    return null; // Return null if country name is not found
+}
+
   
 	</script>
 </body>
