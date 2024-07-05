@@ -1,6 +1,7 @@
 package common;
 
 public class User {
+	private Integer id;
     private String firstName;
     private String lastName;
     private String email;
@@ -8,16 +9,15 @@ public class User {
     private String city;
     private String mobileNumber;
     private String password;
-    
-    
-    
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public User(String firstName, String lastName, String email, String country, String city, String mobileNumber,
-			String password) {
+	public User(Integer id, String firstName, String lastName, String email, String country, String city,
+			String mobileNumber, String password) {
 		super();
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -25,6 +25,12 @@ public class User {
 		this.city = city;
 		this.mobileNumber = mobileNumber;
 		this.password = password;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -70,13 +76,14 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", country=" + country
-				+ ", city=" + city + ", mobileNumber=" + mobileNumber + ", password=" + password + ", getFirstName()="
-				+ getFirstName() + ", getLastName()=" + getLastName() + ", getEmail()=" + getEmail() + ", getCountry()="
-				+ getCountry() + ", getCity()=" + getCity() + ", getMobileNumber()=" + getMobileNumber()
-				+ ", getPassword()=" + getPassword() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", country=" + country + ", city=" + city + ", mobileNumber=" + mobileNumber + ", password="
+				+ password + ", getId()=" + getId() + ", getFirstName()=" + getFirstName() + ", getLastName()="
+				+ getLastName() + ", getEmail()=" + getEmail() + ", getCountry()=" + getCountry() + ", getCity()="
+				+ getCity() + ", getMobileNumber()=" + getMobileNumber() + ", getPassword()=" + getPassword()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
 	}
-
+	
 	
 }

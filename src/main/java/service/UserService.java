@@ -30,6 +30,7 @@ public class UserService {
 
             if (resultSet.next()) {
                 user = new User();
+                user.setId(resultSet.getInt("Id"));
                 user.setFirstName(resultSet.getString("FirstName"));
                 user.setLastName(resultSet.getString("LastName"));
                 user.setEmail(resultSet.getString("Email"));
