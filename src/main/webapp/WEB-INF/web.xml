@@ -60,7 +60,7 @@
 		<servlet-name>Game</servlet-name>
 		<url-pattern>/game</url-pattern>
 	</servlet-mapping>
-		<servlet>
+	<servlet>
 		<servlet-name>GetCurrency</servlet-name>
 		<servlet-class>controller.GetCurrency</servlet-class>
 	</servlet>
@@ -68,4 +68,18 @@
 		<servlet-name>GetCurrency</servlet-name>
 		<url-pattern>/getcurrency</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>Subscriber</servlet-name>
+		<servlet-class>controllerSubscriber</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Subscriber</servlet-name>
+		<url-pattern>/Subscriber</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
 </web-app>
