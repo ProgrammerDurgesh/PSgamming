@@ -377,6 +377,27 @@
 			$("input").on("input", function() {
 				validateOtp();
 			});
+			
+			document.getElementById('otp').addEventListener('input', function (e) {
+	            var input = e.target.value;
+
+	            // Remove any non-numeric characters
+	            input = input.replace(/\D/g, '');
+
+	            // Limit to 6 digits
+	            if (input.length > 6) {
+	                input = input.slice(0, 6);
+	            }
+
+	            e.target.value = input;
+	        });
+
+	        document.getElementById('otp').addEventListener('keypress', function (e) {
+	            // Allow only numeric characters
+	            if (!/[0-9]/.test(e.key)) {
+	                e.preventDefault();
+	            }
+	        });
 		});
 	</script>
 </body>

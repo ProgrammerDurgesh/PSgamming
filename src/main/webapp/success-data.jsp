@@ -371,8 +371,7 @@
                 window.location.href = "https://playsmartgaming.com/games/horse-racing-26062402/index.html";
             }
             console.log('Retrieved response data:', responseObject.purchase.products[0].name);
-    
-            
+   
             // Remove the item from session storage
             localStorage.removeItem('responseData');
         }else{
