@@ -44,6 +44,13 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
+
+#gameName:disabled {
+	background-color: transparent;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
 </style>
 </head>
 
@@ -67,133 +74,112 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 	<!-- Preloader end -->
 
 	<!-- Header -->
-	<section id="header" class="header_area">
+	   <section id="header" class="header_area">
 
-		<!-- NAV AREA CSS -->
-		<nav id="nav-part"
-			class="navbar header-nav other-nav custom_nav full_nav sticky-top navbar-expand-md hidden-main">
-			<div class="container">
+        <!-- NAV AREA CSS -->
+        <nav id="nav-part"
+            class="navbar header-nav other-nav custom_nav full_nav sticky-top navbar-expand-md hidden-main">
+            <div class="container">
 
 
-				<a class="navbar-brand" href="index.jsp">
-					<p class="logotxt">PSgaming</p> <!-- <img src="assets/images/header-logo.png" class="img-fluid logo-color" alt="logo"> -->
-				</a>
+                <a class="navbar-brand" href="index.jsp">
+                    <p class="logotxt">PSgaming</p>
+                    <!-- <img src="assets/images/header-logo.png" class="img-fluid logo-color" alt="logo"> -->
+                    </a>
 
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-					aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<div class="collapse navbar-collapse"
-					id="bs-example-navbar-collapse-1">
-					<div class="nav-res">
-						<ul class="nav navbar-nav m-auto menu-inner tog-nav">
-							<li><a href="#banner" class="active">Home</a></li>
-							<li><a href="https://playsmartgaming.com/about-us/">About
-									us</a></li>
-							<li><a href="https://playsmartgaming.com/services/">Services</a></li>
-							<li><a href="https://playsmartgaming.com/contact-us/">Contact
-									us</a></li>
-							<li class="dropdown"><a href="javascript:void(0)"
-								class="dropdown-toggle" data-toggle="dropdown" role="button"
-								aria-haspopup="true" aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu maindrop_menu">
-									<li><a href="https://playsmartgaming.com/refund-policy/">Refund
-											Policy</a></li>
-									<li><a href="https://playsmartgaming.com/shipping-policy/">Shipping
-											Policy</a></li>
-									<li><a
-										href="https://playsmartgaming.com/terms-and-policy/">Terms
-											and Policy</a></li>
-								</ul></li>
-							<li class="more-less"><i class="fa fa-align-right"></i> <i
-								class="fa fa-times"></i> <!-- <i class="fa-solid fa-bars"></i> -->
-							</li>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="nav-res">
+                        <ul class="nav navbar-nav m-auto menu-inner tog-nav">
+                            <li><a href="index.jsp" class="active">Home</a></li>
+                            <li><a href="about-us.jsp">About us</a></li>
+                            <li><a href="contact-us.jsp">Contact us</a></li>
+                            <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Pages</a>
+                                <ul class="dropdown-menu maindrop_menu">
+                                    <li><a href="term-policy.jsp">Terms and Policy</a></li>
+                                </ul>
+                            </li>
+                            <li class="more-less">
+                                <i class="fa fa-align-right"></i>
+                                <i class="fa fa-times"></i>
+                                <!-- <i class="fa-solid fa-bars"></i> -->
+                            </li>
 
-						</ul>
-					</div>
-					<!-- html for signup  -->
-					<ul class="login_menu navbar-right nav-sign">
-						<li class="login"><a href="signup.jsp"
-							class="btn-4 yellow-btn">Signup</a></li>
-						<li class="login"><a href="login.jsp" class="btn-4 pink-bg">Login</a></li>
-					</ul>
-					<!-- html for user dropdown  -->
-					<div class="nav-res userNav-res">
-						<ul class="nav">
-							<li class="dropdown"><a href="javascript:void(0)"
-								class="dropdown-toggle" data-toggle="dropdown" role="button"
-								aria-haspopup="true" aria-expanded="false">Demo132</a>
-								<ul class="dropdown-menu maindrop_menu">
-									<li>
-										<form id="logoutForm"
-											action="${pageContext.request.contextPath}/logout"
-											method="get">
-											<a href="javascript:void(0)" onclick="logout()">Logout</a>
-										</form>
-									</li>
-								</ul></li>
+                        </ul>
+                    </div>
+                    <!-- html for signup  -->
+                    <ul class="login_menu navbar-right nav-sign">
+                        <li class="login"><a href="signup.jsp" class="btn-4 yellow-btn">Signup</a></li>
+                        <li class="login"><a href="login.jsp" class="btn-4 pink-bg">Login</a></li>
+                    </ul>
+                    <!-- html for user dropdown  -->
+                     <div class="nav-res userNav-res">
+                        <ul class="nav">
+                            <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Demo132</a>
+                                <ul class="dropdown-menu maindrop_menu">
+                                    	<li>
+                                			<form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
+		                                    	<a href="javascript:void(0)" onclick="logout()">Logout</a>
+		                                    </form>
+                                    	</li>
+                                </ul>
+                            </li>
+						
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </nav>
+        <!-- mobile menu -->
 
-						</ul>
-					</div>
-				</div>
-			</div>
-		</nav>
-		<!-- mobile menu -->
+        <nav id='cssmenu' class="hidden mobile">
+            <div class="logo">
+                <a href="index.jsp" class="logo">
+                    <!-- <img src="assets/images/header-logo.png" class="img-responsive" alt=""> -->
+                    <p class="logotxt">PSgaming</p>
+                </a>
+            </div>
+            <div id="head-mobile"></div>
+            <div class="button"><i class="more-less fa fa-align-right"></i></div>
+            <ul>
+                <li><a href="index.jsp" class="active">Home</a></li>
+                <li><a href="about-us.jsp">About us</a></li>
+                <li><a href="contact-us.jsp">Contact us</a></li>
+                <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu maindrop_menu">
+                        <li><a href="term-policy.jsp">Terms and Policy</a></li>
+                    </ul>
+                </li>
 
-		<nav id='cssmenu' class="hidden mobile">
-			<div class="logo">
-				<a href="index.jsp" class="logo"> <!-- <img src="assets/images/header-logo.png" class="img-responsive" alt=""> -->
-					<p class="logotxt">PSgaming</p>
-				</a>
-			</div>
-			<div id="head-mobile"></div>
-			<div class="button">
-				<i class="more-less fa fa-align-right"></i>
-			</div>
-			<ul>
-				<li><a href="#banner" class="active">Home</a></li>
-				<li><a href="https://playsmartgaming.com/about-us/">About
-						us</a></li>
-				<li><a href="https://playsmartgaming.com/services/">Services</a></li>
-				<li><a href="https://playsmartgaming.com/contact-us/">Contact
-						us</a></li>
-				<li class="dropdown"><a href="" class="dropdown-toggle"
-					data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">Pages</a>
-					<ul class="dropdown-menu maindrop_menu">
-						<li><a href="https://playsmartgaming.com/refund-policy/">Refund
-								Policy</a></li>
-						<li><a href="https://playsmartgaming.com/shipping-policy/">Shipping
-								Policy</a></li>
-						<li><a href="https://playsmartgaming.com/terms-and-policy/">Terms
-								and Policy</a></li>
-					</ul></li>
+                <li class="login"><a href="signup.jsp" class="btn-4 yellow-bg yellow-btn">Signup</a></li>
+                <li class="login"><a href="login.jsp" class="btn-4 yellow-bg">Login</a></li> 
 
-				<li class="login"><a href="signup.jsp"
-					class="btn-4 yellow-bg yellow-btn">Signup</a></li>
-				<li class="login"><a href="login.jsp" class="btn-4 yellow-bg">Login</a></li>
+                <li class="dropdown userInfo"><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">Demo132</a>
+                <ul class="dropdown-menu maindrop_menu">
+                    <li>
+						<form id="logoutForm" action="${pageContext.request.contextPath}/logout" method="get">
+		                       <a href="javascript:void(0)" onclick="logout()">Logout</a>
+		                </form>
+					</li>
+                </ul>
+            </li>
 
-				<li class="dropdown userInfo"><a href=""
-					class="dropdown-toggle" data-toggle="dropdown" role="button"
-					aria-haspopup="true" aria-expanded="false">Demo132</a>
-					<ul class="dropdown-menu maindrop_menu">
-						<li>
-							<form id="logoutForm"
-								action="${pageContext.request.contextPath}/logout" method="get">
-								<a href="javascript:void(0)" onclick="logout()">Logout</a>
-							</form>
-						</li>
-					</ul></li>
+            </ul>
 
-			</ul>
+        </nav>
 
-		</nav>
-
-		<!-- End mobile menu -->
-	</section>
+        <!-- End mobile menu -->
+    </section>
 	<!-- Header End -->
 
 	<!-- contact-page Start -->
@@ -213,7 +199,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 							method="post">
 							<div class="row">
 								<div class="form-group col-md-6">
-									<label>Game</label> <select name="gameName"
+									<label>Game</label> <select name="gameName" disabled
 										class="form-control" id="gameName">
 										<option>Select game</option>
 										<option value="Bingo Slot">Bingo slot</option>
@@ -229,12 +215,13 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 										readonly id="gamePrice" name="price" placeholder="Price">
 								</div>
 								<div class="form-group col-md-6">
-									<label>Email</label> <input type="text" id="userEmail" class="form-control"
-										name="email" placeholder="Enter Your Email">
+									<label>Email</label> <input type="text" id="userEmail"
+										class="form-control" name="email"
+										placeholder="Enter Your Email">
 								</div>
 								<div class="form-group col-md-6">
-									<label>Phone</label> <input type="text" class="form-control" id="userPhone"
-										name="phoneNumber" placeholder="Enter phone">
+									<label>Phone</label> <input type="text" class="form-control"
+										id="userPhone" name="phoneNumber" placeholder="Enter phone">
 								</div>
 								<div class="form-group col-md-6">
 									<label>Currency</label> <input type="text" class="form-control"
@@ -246,16 +233,16 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 									</select> -->
 								</div>
 								<div class="form-group col-md-6">
-									<label>Street address</label> <input type="text"
+									<label>Street address</label> <input type="text" id="userAddress"
 										class="form-control" name="streetAddress"
 										placeholder="Enter address">
 								</div>
 								<div class="form-group col-md-6">
-									<label>City</label> <input type="text" class="form-control" id="userCity"
-										name="city" placeholder="Enter city">
+									<label>City</label> <input type="text" class="form-control" 
+										id="userCity" name="city" placeholder="Enter city">
 								</div>
 								<div class="form-group col-md-6">
-									<label>State code</label> <input type="text"
+									<label>State code</label> <input type="text" id="userStatecode"
 										class="form-control" name="stateCode"
 										placeholder="Enter state code">
 								</div>
@@ -277,14 +264,13 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 
 								</div>
 								<div class="form-group col-md-6">
-									<label>Zip code</label> <input type="text" class="form-control"
+									<label>Zip code</label> <input type="text" class="form-control" id="userZipcode"
 										name="zipcode" placeholder="Enter zip code">
 								</div>
 							</div>
 							<div class="row">
 								<div class="casino-btn col-sm-12">
-									<button type="submit" 
-										class=" btn-4 yellow-btn faq-btn">Submit</button>
+									<button type="submit" class=" btn-4 yellow-btn faq-btn">Submit</button>
 								</div>
 							</div>
 						</form>
@@ -373,14 +359,13 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 										class="img-fluid" alt="effect">
 								</div>
 								<div class="sub-form">
-									<form>
-										<div class="form-group col-sm-12">
-											<input type="text" class="form-control" name="email"
-												placeholder="Enter Your Email">
-										</div>
-										<div class="casino-btn newsletter">
-											<a href="#" class="btn-4 yellow-btn">send</a>
-										</div>
+									<form id="emailForm" action="${pageContext.request.contextPath}/subscriber" method="post">
+									    <div class="form-group col-sm-12">
+									        <input type="text" class="form-control" name="email" id="emailInput" placeholder="Enter Your Email" required />
+									    </div>
+									    <div class="casino-btn newsletter">
+									        <button type="submit" class="btn-4 yellow-btn" id="sendButton">send</button>
+									    </div>
 									</form>
 								</div>
 							</div>
@@ -448,22 +433,23 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
     var userEmail = '<%=(session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getEmail() : ""%>';
     var userPhone = '<%=(session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getMobileNumber() : ""%>';
     var userCity = '<%=(session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getCity() : ""%>';
- var gamePrice =   ' <%String gamePrice = (session.getAttribute("gamePrice") != null) ? (String) session.getAttribute("gamePrice") : "";%>' 
-<%-- <%
-    String gamePriceok = (String) session.getAttribute("gamePrice");
-    if (gamePriceok == null) {
-    	gamePriceok = "N/A";  // Default value if gamePrice is not found in session
-    }
-%> --%>
-<%-- <p>Game Price: <%= gamePrice %></p> --%>
-
+    var userAddress = '<%=(session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getStreetAddress() : ""%>';
+    var userStateCode = '<%=(session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getStateCode() : ""%>';
+    var userZipCode = '<%=(session.getAttribute("user") != null) ? ((User) session.getAttribute("user")).getZipCode() : ""%>';
+    
+	var gamePrice =   ' <%String gamePrice = (session.getAttribute("gamePrice") != null) ? (String) session.getAttribute("gamePrice") : "";%>' 
+	var gamesObject = {};
     var  gameCurrency = $("#userCurrency").val();
     var gamePrice="";
+    // js for user login and withouth login case 
   if (userName !== '') {
       console.log("User is logged in: " + userName);
       $("#userCity").val(userCity);
       $("#userPhone").val(userPhone);
       $("#userEmail").val(userEmail);
+      $("#userAddress").val(userAddress);
+      $("#userStatecode").val(userStateCode);
+      $("#userZipcode").val(userZipCode);
       $(".userNav-res").show();
       $(".login_menu").hide();
       $(".userNav-res ul.nav li.dropdown .dropdown-toggle").text(userName);
@@ -478,6 +464,9 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
       $("#userCity").val("");
       $("#userPhone").val("");
       $("#userEmail").val("");
+      $("#userAddress").val("");
+      $("#userStatecode").val("");
+      $("#userZipcode").val("");
       $(".userNav-res").hide();
       $(".login_menu").show();
       $(".login").show();
@@ -554,7 +543,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 							var gamesArray = allGames.split(", ");
 
 							// Object to store games with name as key and price as value
-							var gamesObject = {};
+							
 
 							// Iterating over the array to extract name and price for each game
 							for (var i = 0; i < gamesArray.length; i += 4) {
@@ -565,6 +554,9 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 							}
 
 							console.log("yash",gamesObject);
+							
+						
+							
 					
 							
 							
@@ -574,7 +566,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 							    //console.log("selectedGame :" , selectedGame);
 							     gamePrice = gamesObject[selectedGame]; // Get price from gamesObject
 							     gameCurrency = $("#userCurrency").val();
-							    //console.log("game details :" , gamePrice ,  gameCurrency)
+							    console.log("game details :" , gamePrice ,  gameCurrency)
 							    // Retrieve the base URL from the server-side JSP context
     var baseUrl = '<%=request.getContextPath()%>';
     
@@ -627,6 +619,43 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 	                            } else {
 	                                console.error('Currency not found for country:', country);
 	                            }
+	                            
+	                        	//alert(sessionStorage.getItem('gameName'))
+							    var gameName = localStorage.getItem('gameName'); // Retrieve game name from session storage
+							    console.log("gameName :" , gameName)
+							    if (gameName) {
+							        var selectElement = document.getElementById('gameName');
+							        for (var i = 0; i < selectElement.options.length; i++) {
+							            if (selectElement.options[i].value === gameName) {
+							                selectElement.options[i].selected = true;
+							                break;
+							            }
+							        }
+							    }
+							    
+							    var selectedGame = gameName; // Get selected game option value
+							    //console.log("selectedGame :" , selectedGame);
+							     gamePrice = gamesObject[selectedGame]; // Get price from gamesObject
+							     gameCurrency = $("#userCurrency").val();
+							    console.log("game details :" , gamePrice ,  gameCurrency)
+							    // Retrieve the base URL from the server-side JSP context
+							var baseUrl = '<%=request.getContextPath()%>';
+
+
+							$.ajax({
+							url: baseUrl + "/getcurrency?currency=" + gameCurrency + "&amount=" + gamePrice,
+							method: 'POST',
+							success: function (response) {
+							//alert("Success: " + response.data);
+							var formattedResponse = parseFloat(response).toFixed(2);  // Converts to float and fixes to 2 decimal places
+							$("#gamePrice").val(formattedResponse)
+							console.log("response" , formattedResponse)
+							},
+							error: function (error) {
+							console.log('Error:', error);
+							// Handle error
+							}
+							});
 	                        })
 	                        .catch(error => console.error('Error fetching the country information:', error));
 	                }, function(error) {
@@ -637,6 +666,7 @@ List<GameEntity> allGames = (List<GameEntity>) session.getAttribute("allGames");
 	            }
 	        })
 	        .catch(error => console.error('Error loading country-by-currency-code.json:', error));
+	    
 	});
 
 //Function to find the currency code from the JSON data
@@ -657,6 +687,86 @@ function getCountryCode(countryName, countriesList) {
     }
     return null; // Return null if country name is not found
 }
+
+// ===== News letter  Email js === //
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+      var email = document.getElementById('emailInput').value;
+      var hasError = false;
+
+      if (email === '') {
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Please enter an email address!',
+          });
+          hasError = true;
+      } else if (!validateEmail(email)) {
+          Swal.fire({
+              icon: 'error',
+              title: 'Invalid email',
+              text: 'Please enter a valid email address!',
+          });
+          hasError = true;
+      }
+
+      if (hasError) {
+          event.preventDefault(); // Prevent form submission if there's an error
+      }
+  });
+  
+//Get URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+const status = urlParams.get('status');
+
+// Show SweetAlert based on status
+if (status === 'success') {
+    Swal.fire({
+        icon: 'success',
+        title: 'Thank you for subscribing',
+    });
+} else if (status === 'failure') {
+    Swal.fire({
+        icon: 'error',
+        title: 'Some internal error occurred!',
+    });
+} else if (status === 'duplicate') {
+    Swal.fire({
+        icon: 'warning',
+        title: 'You are already subscribed!',
+    });
+} else if (status === 'invalid_email') {
+    Swal.fire({
+        icon: 'error',
+        title: 'Invalid email',
+        text: 'Please enter a valid email address!',
+    });
+}
+
+// ===== News letter  Email js end === //
+
+function validateEmail(email) {
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+//	alert("")
+    var gameName = sessionStorage.getItem('gameName'); // Retrieve game name from session storage
+    console.log("gameName :" , gameName)
+    if (gameName) {
+        var selectElement = document.getElementById('gameName');
+        for (var i = 0; i < selectElement.options.length; i++) {
+            if (selectElement.options[i].value === gameName) {
+                selectElement.options[i].selected = true;
+                break;
+            }
+        }
+    }
+});
+
+
 
   
 	</script>

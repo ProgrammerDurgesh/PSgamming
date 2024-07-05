@@ -33,7 +33,7 @@ public class SignupServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		String streetAddress = request.getParameter("streetAddress");
 		String stateCode = request.getParameter("stateCode");
-		String zipCode = request.getParameter("zipCode");
+		String zipCode = request.getParameter("zipcode");
 		String otpForDbSave = generateOTP();
 		String optForEmailSendFormatted = "Dear " + firstName + " " + lastName + ",\n\n" + "OTP is " + otpForDbSave
 				+ " for verifying your registration details. This can be used once.\n\n" + "Thank You\n" + "PSgaming";

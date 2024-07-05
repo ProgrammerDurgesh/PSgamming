@@ -207,6 +207,23 @@
                                     
                                 </div>
                                 <div class="form-group col-md-6">
+									<label>Street address</label> <input type="text"
+										class="form-control" name="streetAddress"
+										placeholder="Enter address" />
+										<label class="frmValidmsg" for="">Please eneter street address</label>
+								</div>
+								<div class="form-group col-md-6">
+									<label>State code</label> <input type="text"
+										class="form-control" name="stateCode"
+										placeholder="Enter state code">
+										<label class="frmValidmsg" for="">Please eneter state code</label>
+								</div>
+								<div class="form-group col-md-6">
+									<label>Zip code</label> <input type="text" class="form-control"
+										name="zipcode" placeholder="Enter zip code">
+										<label class="frmValidmsg" for="">Please eneter zip code</label>
+								</div>
+                                <div class="form-group col-md-6">
                                     <label>City</label>
                                     <input type="text" class="form-control" name="city" placeholder="Enter city">
                                     <label class="frmValidmsg" for="">Please eneter city name</label>
@@ -216,10 +233,11 @@
                                     <input type="text" class="form-control" name="country" placeholder="Enter country">
                                     <label class="frmValidmsg" for="">Please eneter country name</label>
                                 </div>
-                                <div class="form-group col-md-12">
+                                <div class="form-group col-md-6">
                                     <label>Password</label>
-                                    <input type="password" class="form-control" name="password" placeholder="Enter password">
-                                    <label class="frmValidmsg" for="">Please eneter passworde</label>
+                                    <input type="password" id="gamePassword" class="form-control" name="password" placeholder="Enter password">
+                                    <label class="frmValidmsg" for="">"Password at least 6 & special character.</label>
+
                                 </div>
                             </div>
                             <div class="row">
@@ -296,15 +314,14 @@
                                     <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
                                 </div>
                                 <div class="sub-form">
-                                    <form>
-                                        <div class="form-group col-sm-12">
-                                            <input type="text" class="form-control" name="email"
-                                                placeholder="Enter Your Email">
-                                        </div>
-                                        <div class="casino-btn newsletter">
-                                            <a href="#" class="btn-4 yellow-btn">send</a>
-                                        </div>
-                                    </form>
+                                    <form id="emailForm" action="${pageContext.request.contextPath}/subscriber" method="post">
+									    <div class="form-group col-sm-12">
+									        <input type="text" class="form-control" name="email" id="emailInput" placeholder="Enter Your Email" required />
+									    </div>
+									    <div class="casino-btn newsletter">
+									        <button type="submit" class="btn-4 yellow-btn" id="sendButton">send</button>
+									    </div>
+									</form>
                                 </div>
                             </div>
                         </div>
@@ -419,13 +436,6 @@
                     $("input[name='email']").next(".frmValidmsg").show();
                 }
 
-                // Phone validation
-                var phone = $("input[name='mobileNumber']").val().trim();
-                if (phone === "") {
-                    isValid = false;
-                    $("input[name='mobileNumber']").next(".frmValidmsg").show();
-                }
-
                 // City validation
                 var city = $("input[name='city']").val().trim();
                 if (city === "") {
@@ -438,6 +448,45 @@
                 if (country === "") {
                     isValid = false;
                     $("input[name='country']").next(".frmValidmsg").show();
+                }
+                
+                // streetAddress validation
+                var streetAddress = $("input[name='streetAddress']").val().trim();
+                if (streetAddress === "") {
+                    isValid = false;
+                    $("input[name='streetAddress']").next(".frmValidmsg").show();
+                }
+             // stateCode validation
+                var stateCode = $("input[name='stateCode']").val().trim();
+                if (stateCode === "") {
+                    isValid = false;
+                    $("input[name='stateCode']").next(".frmValidmsg").show();
+                }
+                
+             // zipcode validation
+                var zipcode = $("input[name='zipcode']").val().trim();
+                if (zipcode === "") {
+                    isValid = false;
+                    $("input[name='zipcode']").next(".frmValidmsg").show();
+                }
+             // zipcode validation
+                var zipcode = $("input[name='zipcode']").val().trim();
+                if (zipcode === "") {
+                    isValid = false;
+                    $("input[name='zipcode']").next(".frmValidmsg").show();
+                }
+             // password validation    
+                var passwordInput = document.getElementById("gamePassword");
+                var password = passwordInput.value;
+                
+                // Define a regular expression for validation
+                var passwordRegex = /^(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?])(?=.*[a-zA-Z0-9]).{6,}$/;
+                
+                // Check if password matches the regular expression
+                if (!passwordRegex.test(password)) {
+                	isValid = false;
+                    $("input[name='password']").next(".frmValidmsg").show();
+                    return;
                 }
 
                 return isValid;
@@ -455,6 +504,68 @@
             $("input").on("input", function() {
                 validateForm();
             });
+            
+            // ===== News letter  Email js === //
+            document.getElementById('emailForm').addEventListener('submit', function(event) {
+                  var email = document.getElementById('emailInput').value;
+                  var hasError = false;
+
+                  if (email === '') {
+                      Swal.fire({
+                          icon: 'error',
+                          title: 'Oops...',
+                          text: 'Please enter an email address!',
+                      });
+                      hasError = true;
+                  } else if (!validateEmail(email)) {
+                      Swal.fire({
+                          icon: 'error',
+                          title: 'Invalid email',
+                          text: 'Please enter a valid email address!',
+                      });
+                      hasError = true;
+                  }
+
+                  if (hasError) {
+                      event.preventDefault(); // Prevent form submission if there's an error
+                  }
+              });
+              
+          //Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
+
+            // Show SweetAlert based on status
+            if (status === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Thank you for subscribing',
+                });
+            } else if (status === 'failure') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Some internal error occurred!',
+                });
+            } else if (status === 'duplicate') {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'You are already subscribed!',
+                });
+            } else if (status === 'invalid_email') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Invalid email',
+                    text: 'Please enter a valid email address!',
+                });
+            }
+
+            // ===== News letter  Email js end === //
+
+
+            function validateEmail(email) {
+                var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
         });
    
    </script>

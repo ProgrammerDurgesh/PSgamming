@@ -465,15 +465,14 @@
                                     <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
                                 </div>
                                 <div class="sub-form">
-                                    <form>
-                                        <div class="form-group col-sm-12">
-                                            <input type="text" class="form-control" name="email"
-                                                placeholder="Enter Your Email">
-                                        </div>
-                                        <div class="casino-btn newsletter">
-                                            <a href="#" class="btn-4 yellow-btn">send</a>
-                                        </div>
-                                    </form>
+                                    <form id="emailForm" action="${pageContext.request.contextPath}/subscriber" method="post">
+									    <div class="form-group col-sm-12">
+									        <input type="text" class="form-control" name="email" id="emailInput" placeholder="Enter Your Email" required />
+									    </div>
+									    <div class="casino-btn newsletter">
+									        <button type="submit" class="btn-4 yellow-btn" id="sendButton">send</button>
+									    </div>
+									</form>
                                 </div>
                             </div>
                         </div>
@@ -558,6 +557,62 @@
       // Assuming you want to submit the form to the "/otp" endpoint
       document.forms["logoutForm"].submit();
   }
+  
+  // ===== News letter  Email js === //
+  document.getElementById('emailForm').addEventListener('submit', function(event) {
+        var email = document.getElementById('emailInput').value;
+        var hasError = false;
+
+        if (email === '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please enter an email address!',
+            });
+            hasError = true;
+        } else if (!validateEmail(email)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid email',
+                text: 'Please enter a valid email address!',
+            });
+            hasError = true;
+        }
+
+        if (hasError) {
+            event.preventDefault(); // Prevent form submission if there's an error
+        }
+    });
+    
+//Get URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const status = urlParams.get('status');
+
+  // Show SweetAlert based on status
+  if (status === 'success') {
+      Swal.fire({
+          icon: 'success',
+          title: 'Thank you for subscribing',
+      });
+  } else if (status === 'failure') {
+      Swal.fire({
+          icon: 'error',
+          title: 'Some internal error occurred!',
+      });
+  } else if (status === 'duplicate') {
+      Swal.fire({
+          icon: 'warning',
+          title: 'You are already subscribed!',
+      });
+  } else if (status === 'invalid_email') {
+      Swal.fire({
+          icon: 'error',
+          title: 'Invalid email',
+          text: 'Please enter a valid email address!',
+      });
+  }
+
+  // ===== News letter  Email js end === //
     </script>
 </body>
 

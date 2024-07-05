@@ -121,7 +121,9 @@ body {
     Preloader
 ==========================================
 */
-
+html {
+  scroll-behavior: smooth;
+}
 .preloader {
     overflow: hidden;
     height: 100%;
@@ -312,7 +314,7 @@ p {
     background: rgba(152, 51, 134, 1);
 }
 
-.casino-btn a , .contact-page .casino-btn button {
+.casino-btn a , .contact-page .casino-btn button , .newsletter button {
     position: relative;
     display: inline-block;
     font-size: 24px;
@@ -341,6 +343,10 @@ p {
     outline:none;
     cursor: pointer;
 }
+.newsletter button{
+	border: none;
+	cursor:pointer;
+} 
 
 .casino-btn a:hover , .contact-page .casino-btn button:hover {
     background: linear-gradient(to bottom, #e673cf 10%, #9a368a 90%);
@@ -1184,6 +1190,11 @@ nav.navbar .container {
     font-size:16px;
     line-height:20px;
     text-transform:capitalize;
+}
+.how-start .gdpRow .cardBox .gamTTl span{
+    font-size:14px;
+    line-height:20px;
+    color:#f2f2f2;
 }
 .how-start .gdpRow .slick-btn{
     width: 42px;
@@ -2183,7 +2194,7 @@ nav.navbar .container {
     height: 50px;
 }
 
-.newsletter a {
+.newsletter a , .newsletter button {
     border-radius: 0;
     position: absolute;
     top: 0;

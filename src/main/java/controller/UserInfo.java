@@ -6,8 +6,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import javax.servlet.annotation.WebServlet;
-
 import common.DatabaseConfiguration;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;

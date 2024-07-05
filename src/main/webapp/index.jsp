@@ -187,7 +187,7 @@
                         <p>playsmartgaming.com Publishes some of the highest quality games available online. Our massive selection of games include some of the most played genres online, the most popular being <b> racing games, slot games, action games</b>.</p>
 
                         <div class="casino-btn">
-                            <a href="login.jsp" class="btn-4 yellow-btn">play now</a>
+                            <a href="#project-img" class="btn-4 yellow-btn">play now</a>
                         </div>
                     </div>
 
@@ -210,7 +210,7 @@
                         <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
                         <p>Explore quality slot games anytime and anywhere. From classic slot machines to modern masterpieces, enjoy exciting visuals and larger-than-life graphics with every spin. With their fun and exciting themes, spectacular graphics, lively sound effects and progressive jackpots, there’s rarely a dull moment with our online casino slots. Their easy-to-learn rules make them simple to enjoy, whether you’re completely new to the world of slots or an experienced player.</p>
                         <div class="casino-btn">
-                            <a href="login.jsp" class="btn-4 yellow-btn">play now</a>
+                            <a href="#project-img" class="btn-4 yellow-btn">play now</a>
                         </div>
                     </div>
                 </div>
@@ -222,58 +222,65 @@
         <div class="container">
             <div class="control-inner gdpRow" id="htrt">
                 <div class="cardBox">
-                    <a href="login.jsp">
+                    <a href="#project-img">
                         <img class="img-fluid" src="assets/images/bingo-game-slider01.png" alt="" />
                         <div class="gamTTl">
                             <p>Bingo slot</p>
+                            <span>NGN 30000/1hr</span>
                         </div>
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="login.jsp">
+                    <a href="#project-img">
                         <img class="img-fluid" src="assets/images/shield-slot-game-slider02.png" alt="" />
                         <div class="gamTTl">
                             <p>shield slot</p>
+                            <span>NGN 30000/1hr</span>
                         </div>
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="login.jsp">
+                    <a href="#project-img">
                         <img class="img-fluid" src="assets/images/horse-race-game-slider03.png" alt="" />
                         <div class="gamTTl">
                             <p>Horse race slot</p>
+                            <span>NGN 30000/1hr</span>
                         </div>
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="login.jsp">
+                    <a href="#project-img">
                         <img class="img-fluid" src="assets/images/fruit-slot-machine-game-slider04.png" alt="" />
                         <div class="gamTTl">
                             <p>Fruit slot</p>
+                            <span>NGN 30000/1hr</span>
                         </div>
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="login.jsp">
+                    <a href="#project-img">
                         <img class="img-fluid" src="assets/images/amazing-slot-game-slider05.png" alt="" />
                         <div class="gamTTl">
                             <p>Amazing slot</p>
+                            <span>NGN 30000/1hr</span>
                         </div>
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="login.jsp">
+                    <a href="#project-img">
                         <img class="img-fluid" src="assets/images/bingo-game-slider01.png" alt="" />
                         <div class="gamTTl">
                             <p>Bingo slot</p>
+                            <span>NGN 30000/1hr</span>
                         </div>
                     </a>
                 </div>
                 <div class="cardBox">
-                    <a href="login.jsp">
+                    <a href="#project-img">
                         <img class="img-fluid" src="assets/images/fruit-slot-machine-game-slider04.png" alt="" />
                         <div class="gamTTl">
                             <p>Fruit slot</p>
+                            <span>NGN 30000/1hr</span>
                         </div>
                     </a>
                 </div>
@@ -306,10 +313,11 @@
                                 <div class="overlay-text">
                                     <div class="port-text">
                                         <div class="casino-btn">
-                                            <a href="login.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
+                                            <a href="login.jsp" class="btn-4 yellow-btn game-btn" data-game="Shield Slot">play now</a>
+
                                         </div>
                                         <div class="port-text-btm">
-                                            <input type="hidden" name="shieldSlot" />
+                                            <input type="hidden" name="shieldSlot" value="Shield Slot" />
                                             <h3>Shield slot</h3>
                                             <p><span>NGN 30000/1hr</span></p>
                                         </div>
@@ -326,10 +334,12 @@
                                 <div class="overlay-text">
                                     <div class="port-text">
                                         <div class="casino-btn">
-                                            <a href="login.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
+
+                                            <a href="login.jsp" class="btn-4 yellow-btn game-btn" data-game="Bingo Slot">play now</a>
+
                                         </div>
                                         <div class="port-text-btm">
-                                            <input type="hidden" name="bingoSlot" id="bingoSlot" value="bingoSlot" />
+                                            <input type="hidden" name="bingoSlot" id="bingoSlot" value="Bingo Slot" />
                                             <h3>Bingo slot</h3>
                                             <p><span>NGN 30000/1hr</span></p>
                                         </div>
@@ -346,9 +356,12 @@
                                 <div class="overlay-text">
                                     <div class="port-text">
                                         <div class="casino-btn">
-                                            <a href="login.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
+
+                                            <a href="login.jsp"  class="btn-4 yellow-btn game-btn" data-game="Fruit Slot">play now</a>
+
                                         </div>
                                         <div class="port-text-btm">
+                                        <input type="hidden" name="fruitSlot" id="fruitSlot" value="Fruit Slot" />
                                             <h3>Fruit slot</h3>
                                             <p><span>NGN 30000/1hr</span></p>
                                         </div>
@@ -365,9 +378,11 @@
                                 <div class="overlay-text">
                                     <div class="port-text">
                                         <div class="casino-btn">
-                                            <a href="login.jsp" target="_blank" class="btn-4 yellow-btn">play now</a>
+                                            <a href="login.jsp" class="btn-4 yellow-btn game-btn" data-game="Horse Race Slot">play now</a>
+
                                         </div>
                                         <div class="port-text-btm">
+                                        <input type="hidden" name="horseRaceSlot" id="horseRaceSlot" value="Horse Race Slot" />
                                             <h3>Horse race slot</h3>
                                             <p><span>NGN 30000/1hr</span></p>
                                         </div>
@@ -400,13 +415,13 @@
             </div>
 
   
-            <div class="row justify-content-center text-center">
+          <!--   <div class="row justify-content-center text-center">
                 <div class="col-md-12">
                     <div class="casino-btn start-btn">
                         <a href="javascript:void(0)" class="btn-4 yellow-btn">Browse All</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </section>
@@ -427,22 +442,22 @@
                 <div class="col-md-5 mx-auto no-padding casGnbn">
                     <div class="row">
                         <div class="col-md-6">
-                            <a href="login.jsp">
+                            <a href="#project-img">
                                 <img src="assets/images/bingo-game-slider01.png" class="img-fluid" alt="effect">
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <a href="login.jsp">
+                            <a href="#project-img">
                                 <img src="assets/images/shield-slot-game-slider02.png" class="img-fluid" alt="effect">
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <a href="login.jsp">
+                            <a href="#project-img">
                                 <img src="assets/images/horse-race-game-slider03.png" class="img-fluid" alt="effect">
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <a href="login.jsp">
+                            <a href="#project-img">
                                 <img src="assets/images/fruit-slot-machine-game-slider04.png" class="img-fluid" alt="effect">
                             </a>
                         </div>
@@ -453,7 +468,7 @@
                     <div class="spin-text">
                         <p style="margin-bottom:15px;">All guaranteed to keep you entertained for hours to come. We pride ourselves on providing our users with original and rewarding content to keep them entertained. So if you are looking for games for kids or to simply blow off a little steam and use up some time, feel free to enjoy all that we offer and return to play more great games.</p>
                         <div class="casino-btn">
-                            <a href="user-detail.html" class="btn-4 yellow-btn">play now</a>
+                            <a href="#project-img" class="btn-4 yellow-btn">play now</a>
                         </div>
 
                     </div>
@@ -525,15 +540,14 @@
                                     <img src="assets/images/heading-border-effect.png" class="img-fluid" alt="effect">
                                 </div>
                                 <div class="sub-form">
-                                    <form>
-                                        <div class="form-group col-sm-12">
-                                            <input type="text" class="form-control" name="email"
-                                                placeholder="Enter Your Email">
-                                        </div>
-                                        <div class="casino-btn newsletter">
-                                            <a href="#" class="btn-4 yellow-btn">send</a>
-                                        </div>
-                                    </form>
+                                    <form id="emailForm" action="${pageContext.request.contextPath}/subscriber" method="post">
+									    <div class="form-group col-sm-12">
+									        <input type="text" class="form-control" name="email" id="emailInput" placeholder="Enter Your Email" required />
+									    </div>
+									    <div class="casino-btn newsletter">
+									        <button type="submit" class="btn-4 yellow-btn" id="sendButton">send</button>
+									    </div>
+									</form>
                                 </div>
                             </div>
                         </div>
@@ -592,7 +606,9 @@
     <script src="assets/js/waypoints.js"></script>
     <script src="assets/js/YouTubePopUp.jquery.js"></script>
     <script src="assets/js/jquery.event.move.js"></script>
-    <script src="assets/js/SmoothScroll.js"></script>
+<!--     <script src="assets/js/SmoothScroll.js"></script> -->
+  <!--   sweet alert CDN link  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- custom -->
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/menu.js"></script>
@@ -609,24 +625,96 @@
       $(".userInfo .dropdown-toggle").text(userName);
       $(".login").hide();
       $(".userInfo").show();
-      $(".casino-btn a").attr("href", "user-detail.jsp");
-      $(".cardBox a").attr("href", "user-detail.jsp");
-      $(".casGnbn a").attr("href", "user-detail.jsp");
+      $(".port_img .casino-btn a").attr("href", "user-detail.jsp");
+     // $(".cardBox a").attr("href", "user-detail.jsp");
+     // $(".casGnbn a").attr("href", "user-detail.jsp");
   }else{
       console.log("User is not logged in");
       $(".userNav-res").hide();
       $(".login_menu").show();
       $(".login").show();
       $(".userInfo").hide();
-      $(".casino-btn a").attr("href", "login.jsp");
-      $(".cardBox a").attr("href", "login.jsp");
-      $(".casGnbn a").attr("href", "login.jsp");
+      $(".port_img .casino-btn a").attr("href", "login.jsp");
+      //$(".cardBox a").attr("href", "login.jsp");
+      //$(".casGnbn a").attr("href", "login.jsp");
   }
   
   function logout() {
       // Assuming you want to submit the form to the "/otp" endpoint
       document.forms["logoutForm"].submit();
   }
+  
+  // ===== News letter  Email js === //
+  document.getElementById('emailForm').addEventListener('submit', function(event) {
+        var email = document.getElementById('emailInput').value;
+        var hasError = false;
+
+        if (email === '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please enter an email address!',
+            });
+            hasError = true;
+        } else if (!validateEmail(email)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid email',
+                text: 'Please enter a valid email address!',
+            });
+            hasError = true;
+        }
+
+        if (hasError) {
+            event.preventDefault(); // Prevent form submission if there's an error
+        }
+    });
+    
+//Get URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const status = urlParams.get('status');
+
+  // Show SweetAlert based on status
+  if (status === 'success') {
+      Swal.fire({
+          icon: 'success',
+          title: 'Thank you for subscribing',
+      });
+  } else if (status === 'failure') {
+      Swal.fire({
+          icon: 'error',
+          title: 'Some internal error occurred!',
+      });
+  } else if (status === 'duplicate') {
+      Swal.fire({
+          icon: 'warning',
+          title: 'You are already subscribed!',
+      });
+  } else if (status === 'invalid_email') {
+      Swal.fire({
+          icon: 'error',
+          title: 'Invalid email',
+          text: 'Please enter a valid email address!',
+      });
+  }
+
+  // ===== News letter  Email js end === //
+
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    $(document).ready(function() {
+        $(".game-btn").click(function() {
+            var gameName = $(this).data("game");
+            console.log("game name "+gameName)
+            localStorage.setItem('gameName', gameName);
+          console.log( "hghggh :",  sessionStorage.getItem('gameName'));
+
+        });
+    });
+
     </script>
 </body>
 

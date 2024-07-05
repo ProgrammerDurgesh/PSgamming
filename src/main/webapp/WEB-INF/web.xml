@@ -70,12 +70,12 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>Subscriber</servlet-name>
-		<servlet-class>controllerSubscriber</servlet-class>
+		<servlet-class>controller.Subscriber</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Subscriber</servlet-name>
-		<url-pattern>/Subscriber</url-pattern>
+		<url-pattern>/subscriber</url-pattern>
 	</servlet-mapping>
 
 
