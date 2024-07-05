@@ -14,9 +14,6 @@ import service.GameService;
 public class Game extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		System.out
-				.println("000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
 		GameService gameService = new GameService();
 		List<GameEntity> allGames = gameService.getAllGames();
 		request.setAttribute("allGames", allGames);

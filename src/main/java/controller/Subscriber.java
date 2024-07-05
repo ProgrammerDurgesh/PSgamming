@@ -33,7 +33,7 @@ public class Subscriber extends HttpServlet {
 	            connection = configuration.getConnection();
 
 	            // Insert into database
-	            String insertSQL = "INSERT INTO subscriber (email, logeduserId) VALUES (?, ?)";
+	            String insertSQL = "INSERT INTO T_SUBSCRIBER (email, logeduserId) VALUES (?, ?)";
 	            PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
 	            preparedStatement.setString(1, email);
 	            preparedStatement.setInt(2, userId);
