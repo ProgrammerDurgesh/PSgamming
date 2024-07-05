@@ -34,7 +34,7 @@ public class GetCurrency extends HttpServlet {
 		String username = "paysecuretechnolgoiesltd60274863";
 		String password = "olipalff9urhhr4nadritf259d";
 		builder.url(
-				"https://xecdapi.xe.com/v1/convert_from.json/?to=" + currrency + "&from=" + "USD" + "&amount=" + amount)
+				"https://xecdapi.xe.com/v1/convert_from.json/?to=" + currrency + "&from=" + "NGN" + "&amount=" + amount)
 				.addHeader("Authorization",
 						"Basic cGF5c2VjdXJldGVjaG5vbGdvaWVzbHRkNjAyNzQ4NjM6b2xpcGFsZmY5dXJoaHI0bmFkcml0ZjI1OWQ=")
 				.addHeader("Accept", "application/json")

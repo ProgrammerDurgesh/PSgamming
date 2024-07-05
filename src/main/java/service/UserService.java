@@ -23,7 +23,7 @@ public class UserService {
         System.out.println("Game Name ____________________"+gameByGameIdAndName);
         try {
             connection = configuration.getConnection();
-            String selectSQL = "SELECT * FROM users WHERE Email = ?";
+            String selectSQL = "SELECT * FROM users WHERE Email = ? AND Active = 1;";
             preparedStatement = connection.prepareStatement(selectSQL);
             preparedStatement.setString(1, email);
             resultSet = preparedStatement.executeQuery();
