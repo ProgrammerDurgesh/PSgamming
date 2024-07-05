@@ -48,18 +48,15 @@ public class UserInfo extends HttpServlet {
             connection = configuration.getConnection();
 
             // Insert into database
-            String insertSQL = "INSERT INTO user_info (game_name, price, email, phone_number, currency, street_address, city, state_code, country, zipcode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String insertSQL = "INSERT INTO T_USER_INFO (game_name, price, email, phone_number, currency, city, country) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
             preparedStatement.setString(1, gameName);
             preparedStatement.setBigDecimal(2, price);
             preparedStatement.setString(3, email);
             preparedStatement.setString(4, phoneNumber);
             preparedStatement.setString(5, currency);
-            preparedStatement.setString(6, streetAddress);
             preparedStatement.setString(7, city);
-            preparedStatement.setString(8, stateCode);
             preparedStatement.setString(9, country);
-            preparedStatement.setString(10, zipcode);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
